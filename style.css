@@ -73,6 +73,9 @@ a{color:var(--accent)}
 .tg-spine{background:#FFD9E0!important;color:#7A1633!important}
 .tg-sports{background:#D3F0F4!important;color:#0A4C57!important}
 .tg-trauma{background:#FFD8D0!important;color:#8A2A10!important}
+.tg-arthroplasty{background:#E1E8D0!important;color:#2E4510!important}
+.tg-campbell{background:#EADFD0!important;color:#5A3A12!important}
+.tg-hip{background:#D6E4F5!important;color:#123A6B!important}
 .tg-paeds{background:#FCE9A8!important;color:#5A4600!important}
 .tile[class*=tg-]{border:2px solid var(--ink)}
 .empty{text-align:center;color:var(--muted);padding:32px 8px}
@@ -289,3 +292,8 @@ button[hidden]{display:none!important}
   .bar{margin-left:-72px;padding-left:72px}
 }
 .side .chips{flex-wrap:wrap;overflow:visible}
+.pg{display:inline-block;font-size:.72em;font-weight:700;background:#EFE8D6;color:#5A4A1F;border:1.5px solid #1a1a1a;border-radius:999px;padding:0 7px;margin:0 2px;vertical-align:1px;white-space:nowrap}
+figure.fig{margin:14px 0;border:2px solid var(--ink);border-radius:12px;background:#fff;padding:8px;overflow:hidden}
+figure.fig img{width:100%;height:auto;display:block;border-radius:6px}
+figure.fig figcaption{font-size:.82em;margin-top:6px;opacity:.8}
+.fb span span.pg{display:inline-block;margin:0 0 0 4px;color:#5A4A1F}
