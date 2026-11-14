@@ -297,3 +297,6 @@ figure.fig{margin:14px 0;border:2px solid var(--ink);border-radius:12px;backgrou
 figure.fig img{width:100%;height:auto;display:block;border-radius:6px}
 figure.fig figcaption{font-size:.82em;margin-top:6px;opacity:.8}
 .fb span span.pg{display:inline-block;margin:0 0 0 4px;color:#5A4A1F}
+
+.subhead{margin:22px 0 10px;font-size:18px}
+.sitem.sub{margin-left:18px}

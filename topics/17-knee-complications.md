@@ -4,6 +4,7 @@ slug: knee-complications
 tags: Knee, Arthroplasty, Campbell
 summary: DVT prophylaxis, PJI work-up (MSIS), infection treatment ladder, patellar problems, peroneal palsy, periprosthetic fractures.
 added: 2026-11-14
+parent: tka
 order: 17
 ---
 

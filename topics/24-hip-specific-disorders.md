@@ -4,6 +4,7 @@ slug: hip-specific-disorders
 tags: Hip, Arthroplasty, Campbell
 summary: Disorder-wise tricks of THA - OA, inflammatory, osteonecrosis, protrusio, Crowe DDH, neck fracture, failed fixation, acetabular fracture, fusion, Paget, sickle cell, infection.
 added: 2026-11-14
+parent: tha
 order: 24
 ---
 

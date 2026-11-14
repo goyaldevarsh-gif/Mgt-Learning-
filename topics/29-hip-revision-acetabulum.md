@@ -4,6 +4,7 @@ slug: hip-revision-acetabulum
 tags: Hip, Arthroplasty, Campbell
 summary: Removing cemented and cementless cups, AAOS and Paprosky classification, cavitary vs segmental defects, augments, cup-cage, pelvic discontinuity.
 added: 2026-11-14
+parent: tha
 order: 29
 ---
 

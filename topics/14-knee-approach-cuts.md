@@ -4,6 +4,7 @@ slug: knee-approach-cuts
 tags: Knee, Arthroplasty, Campbell
 summary: Medial parapatellar vs sub/midvastus, IM vs EM guides, femoral rotation references, gap balancing rules, navigation.
 added: 2026-11-14
+parent: tka
 order: 14
 ---
 

@@ -4,6 +4,7 @@ slug: knee-bearings-indications
 tags: Knee, Arthroplasty, Campbell
 summary: Polyethylene problems, cemented vs cementless, who gets TKA/UKA/PFA, patellar resurfacing, bilateral TKA.
 added: 2026-11-14
+parent: tka
 order: 12
 ---
 

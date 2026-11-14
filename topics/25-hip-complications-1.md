@@ -4,6 +4,7 @@ slug: hip-complications-1
 tags: Hip, Arthroplasty, Campbell
 summary: Mortality, bleeding sources, Brooker HO, VTE prophylaxis, nerve and vascular injury, limb length, and dislocation (cup safe zone by spinopelvic type, algorithm).
 added: 2026-11-14
+parent: tha
 order: 25
 ---
 

@@ -4,6 +4,7 @@ slug: hip-bearings-preop
 tags: Hip, Arthroplasty, Campbell
 summary: Constrained and dual mobility cups, crosslinked poly, ceramic, oxidized zirconium, indications, pre-op optimisation, templating, spinopelvic motion.
 added: 2026-11-14
+parent: tha
 order: 22
 ---
 

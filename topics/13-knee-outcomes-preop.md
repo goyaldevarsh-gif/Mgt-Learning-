@@ -4,6 +4,7 @@ slug: knee-outcomes-preop
 tags: Knee, Arthroplasty, Campbell
 summary: Scores, survivorship, why TKAs fail, pre-op checklist, anaesthesia, pain control, TXA doses.
 added: 2026-11-14
+parent: tka
 order: 13
 ---
 

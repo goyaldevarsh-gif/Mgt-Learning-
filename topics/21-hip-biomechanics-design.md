@@ -4,6 +4,7 @@ slug: hip-biomechanics-design
 tags: Hip, Arthroplasty, Campbell
 summary: Forces on the hip, abductor lever arm, Dorr types, stress shielding, femoral stem designs (cemented and cementless), head size, acetabular cups.
 added: 2026-11-14
+parent: tha
 order: 21
 ---
 

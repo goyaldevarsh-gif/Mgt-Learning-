@@ -373,6 +373,8 @@ function tile(n) { return '<span class="tile ' + tagClass(n.tags[0] || '') + '">
 function cardHtml(n, q) {
   var p = prog(n.slug);
   var badge = p.weak ? '<span class="badge weak">Weak</span>' : p.revised ? '<span class="badge ok">Revised</span>' : '<span class="badge">Not revised</span>';
+  var kc = NOTES.filter(function (x) { return x.parent === n.slug; }).length;
+  if (kc) badge = '<span class="badge">' + kc + ' topics</span>';
   return '<a class="card" href="#/t/' + n.slug + '">' + tile(n) + '<div class="cbody"><div class="card-top"><h3>' + esc(n.title) + '</h3>' + badge + '</div>' +
     '<p class="sum">' + esc(n.summary) + '</p><div class="tags">' + n.tags.map(function (t) { return '<span class="' + tagClass(t) + '">' + esc(tagLabel(t)) + '</span>'; }).join('') + '</div>' +
     (p.revised ? '<div class="meta">Revised ' + daysAgo(p.revised) + '</div>' : '') + '</div></a>';
@@ -384,7 +386,7 @@ function tabbar(active) {
 
 function homeView() {
   var searching = !!S.ui.q.trim() && !isDesk();
-  var list = NOTES.filter(function (n) { return S.ui.filter === 'All' || n.tags.indexOf(S.ui.filter) >= 0; });
+  var list = NOTES.filter(function (n) { return !n.parent && (S.ui.filter === 'All' || n.tags.indexOf(S.ui.filter) >= 0); });
   var revised = NOTES.filter(function (n) { return prog(n.slug).revised; }).length;
   var weak = NOTES.filter(function (n) { return prog(n.slug).weak; }).length;
   var order = NOTES.filter(function (n) { return !prog(n.slug).revised; })
@@ -427,8 +429,10 @@ function topicView(slug, quiet) {
   if (mode === 'revise' && !r.hasRevise) mode = 'full';
   if (mode === 'viva' && !r.hasViva) mode = 'full';
   if (!quiet) { p.opened = Date.now(); p.count = (p.count || 0) + 1; save(); }
-  var prev = NOTES[idx - 1], nextN = NOTES[idx + 1];
-  var h = '<div class="bar"><a class="back" href="#/"><span class="ic">' + IC.arrow + '</span>Topics</a><div class="barbtns">' +
+  var sib = NOTES.filter(function (x) { return (x.parent || '') === (n.parent || ''); }), si = sib.indexOf(n);
+  var prev = sib[si - 1], nextN = sib[si + 1], par = n.parent ? NOTES.filter(function (x) { return x.slug === n.parent; })[0] : null;
+  var kids = NOTES.filter(function (x) { return x.parent === n.slug; });
+  var h = '<div class="bar"><a class="back" href="' + (par ? '#/t/' + par.slug : '#/') + '"><span class="ic">' + IC.arrow + '</span>' + (par ? esc(par.title) : 'Topics') + '</a><div class="barbtns">' +
     '<button class="pillbtn weak' + (p.weak ? ' on' : '') + '" data-act="weak" data-slug="' + slug + '">' + (p.weak ? 'Weak' : 'Mark weak') + '</button>' +
     '<button class="pillbtn ok' + (p.revised ? ' on' : '') + '" data-act="revised" data-slug="' + slug + '" data-top="1">' + (p.revised ? 'Revised' : 'Mark revised') + '</button></div></div>';
   h += '<div class="tags">' + n.tags.map(function (t) { return '<span class="' + tagClass(t) + '">' + esc(tagLabel(t)) + '</span>'; }).join('') + '</div>';
@@ -437,6 +441,7 @@ function topicView(slug, quiet) {
   if (mode === 'full') h += '<div class="toc">' + r.toc + '</div>';
   else h += '<p class="hint">' + (mode === 'revise' ? 'Quick rules only, for last-minute revision.' : 'Tap a question, answer aloud first, then open.') + '</p>';
   h += '<article class="art mode-' + mode + '">' + r.html + '</article>';
+  if (kids.length) h += '<h2 class="subhead">Sub-topics</h2><div class="list">' + kids.map(function (k) { return cardHtml(k); }).join('') + '</div>';
   h += '<div class="notes"><h2>My notes</h2><textarea id="note" placeholder="Pearls from ward rounds, OT, consultant…">' + esc(p.note || '') + '</textarea></div>';
   h += '<div class="actions"><button class="btn primary block" data-act="revised" data-slug="' + slug + '"><span class="ic">' + IC.check + '</span>' + (p.revised ? 'Revised ' + daysAgo(p.revised) + ', mark again' : 'Mark as revised') + '</button></div>';
   h += '<div class="pn">' + (prev ? '<a href="#/t/' + prev.slug + '"><small>&larr; Previous topic</small><b>' + esc(prev.title) + '</b></a>' : '<span></span>') +
@@ -460,9 +465,10 @@ function sideBodyHtml() {
   if (q) return resultsHtml(S.ui.q);
   var cur = parseHash().slug;
   var h = '<div class="chips">' + allTags().map(function (t) { return '<button class="chip ' + (t === 'All' ? '' : tagClass(t)) + (t === S.ui.filter ? ' on' : '') + '" data-filter="' + esc(t) + '">' + esc(tagLabel(t)) + '</button>'; }).join('') + '</div><div class="slist">';
-  NOTES.filter(function (n) { return S.ui.filter === 'All' || n.tags.indexOf(S.ui.filter) >= 0; }).forEach(function (n) {
+  var curN = NOTES.filter(function (x) { return x.slug === cur; })[0], fam = curN ? (curN.parent || curN.slug) : '';
+  NOTES.filter(function (n) { return (S.ui.filter === 'All' || n.tags.indexOf(S.ui.filter) >= 0) && (!n.parent || n.parent === fam); }).forEach(function (n) {
     var pr = prog(n.slug);
-    h += '<a class="sitem' + (n.slug === cur ? ' on' : '') + '" href="#/t/' + n.slug + '">' + tile(n) + '<span class="st"><b>' + esc(n.title) + '</b><small>' + n.tags.map(tagLabel).join(' · ') + '</small></span>' + (pr.weak ? '<i class="dot weak" title="Weak"></i>' : pr.revised ? '<i class="dot ok" title="Revised"></i>' : '') + '</a>';
+    h += '<a class="sitem' + (n.parent ? ' sub' : '') + (n.slug === cur ? ' on' : '') + '" href="#/t/' + n.slug + '">' + tile(n) + '<span class="st"><b>' + esc(n.title) + '</b><small>' + n.tags.map(tagLabel).join(' · ') + '</small></span>' + (pr.weak ? '<i class="dot weak" title="Weak"></i>' : pr.revised ? '<i class="dot ok" title="Revised"></i>' : '') + '</a>';
   });
   return h + '</div>';
 }

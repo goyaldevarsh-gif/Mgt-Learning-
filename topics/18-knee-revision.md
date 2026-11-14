@@ -4,6 +4,7 @@ slug: knee-revision
 tags: Knee, Arthroplasty, Campbell
 summary: Why TKAs fail, instability types, exposures ladder, implant removal, 9 principles, joint line and gap-fill table, results.
 added: 2026-11-14
+parent: tka
 order: 18
 ---
 

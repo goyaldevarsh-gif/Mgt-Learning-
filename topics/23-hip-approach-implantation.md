@@ -4,6 +4,7 @@ tags: Hip, Arthroplasty, Campbell
 slug: hip-approach-implantation
 summary: Posterolateral and direct anterior steps, cup and stem implantation checks, cementing technique, MIS and navigation, three types of trochanteric osteotomy.
 added: 2026-11-14
+parent: tha
 order: 23
 ---
 

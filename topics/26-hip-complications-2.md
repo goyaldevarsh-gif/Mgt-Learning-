@@ -4,6 +4,7 @@ slug: hip-complications-2
 tags: Hip, Arthroplasty, Campbell
 summary: Intra-op and Vancouver fractures, Duncan-Masri, trochanteric nonunion, abductor transfer, and PJI diagnosis (ICM 2018 criteria), DAIR vs one-stage vs two-stage.
 added: 2026-11-14
+parent: tha
 order: 26
 ---
 

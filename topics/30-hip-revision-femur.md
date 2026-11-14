@@ -4,6 +4,7 @@ slug: hip-revision-femur
 tags: Hip, Arthroplasty, Campbell
 summary: AAOS and Della Valle-Paprosky femoral defects, segmental vs cavitary management, struts, modular, extensively coated, tapered fluted, impaction grafting, allograft-prosthesis composite, megaprosthesis.
 added: 2026-11-14
+parent: tha
 order: 30
 ---
 

@@ -55,6 +55,7 @@ def parse(path: pathlib.Path) -> dict:
         "summary": meta["summary"],
         "added": meta["added"],
         "order": int(meta.get("order", "999")),
+        "parent": meta.get("parent", ""),
         "body": body,
     }
 

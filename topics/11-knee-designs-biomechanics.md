@@ -4,6 +4,7 @@ slug: knee-designs-biomechanics
 tags: Knee, Arthroplasty, Campbell
 summary: Implant evolution, medial pivot, CR vs PS, mechanical axis, femoral rotation, patellofemoral forces.
 added: 2026-11-14
+parent: tka
 order: 11
 ---
 

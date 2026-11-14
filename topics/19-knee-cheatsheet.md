@@ -4,6 +4,7 @@ slug: knee-cheatsheet
 tags: Knee, Arthroplasty, Campbell
 summary: One-page revision: 7 tough concepts re-simplified plus every key number with page.
 added: 2026-11-14
+parent: tka
 order: 19
 ---
 

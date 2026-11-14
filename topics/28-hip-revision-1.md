@@ -4,6 +4,7 @@ slug: hip-revision-1
 tags: Hip, Arthroplasty, Campbell
 summary: When to revise, planning checklist, revision approaches, extended trochanteric osteotomy, removing cemented and cementless stems, broken stems and cement.
 added: 2026-11-14
+parent: tha
 order: 28
 ---
 

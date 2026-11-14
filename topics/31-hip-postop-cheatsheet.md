@@ -4,6 +4,7 @@ slug: hip-cheatsheet
 tags: Hip, Arthroplasty, Campbell
 summary: Post-op rehab, weight bearing, return to activity, follow-up, plus tough concepts and every key number with page.
 added: 2026-11-14
+parent: tha
 order: 31
 ---
 

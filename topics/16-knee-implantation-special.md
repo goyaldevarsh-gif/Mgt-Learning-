@@ -4,6 +4,7 @@ slug: knee-implantation-special
 tags: Knee, Arthroplasty, Campbell
 summary: Cementing rules, closure, UKA/PFA steps, post-op, TKA after HTO or patellectomy, Charcot, hemophilia, HIV, DM, psoriasis.
 added: 2026-11-14
+parent: tka
 order: 16
 ---
 

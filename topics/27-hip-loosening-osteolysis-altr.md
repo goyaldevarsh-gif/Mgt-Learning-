@@ -4,6 +4,7 @@ slug: hip-loosening-osteolysis-altr
 tags: Hip, Arthroplasty, Campbell
 summary: Radiographic signs of loosening (Gruen, DeLee-Charnley, Barrack cement grade, Engh), osteolysis biology and management, adverse local tissue reaction work-up.
 added: 2026-11-14
+parent: tha
 order: 27
 ---
 

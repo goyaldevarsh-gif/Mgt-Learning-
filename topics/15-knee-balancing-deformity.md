@@ -4,6 +4,7 @@ slug: knee-balancing-deformity
 tags: Knee, Arthroplasty, Campbell
 summary: What each ligament does, pie-crusting, varus, valgus, flexion contracture, recurvatum, PCL recession, bone defects, patellar tracking.
 added: 2026-11-14
+parent: tka
 order: 15
 ---
 
