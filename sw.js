@@ -1,7 +1,7 @@
-const CACHE = 'ortho-notes-6e6dbd0c89';
+const CACHE = 'ortho-notes-139ba715a3';
 const ASSETS = [
   './', './index.html', './style.css', './app.js', './notes-data.js',
-  './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png', './icons/apple-touch-icon.png'
+  './manifest.webmanifest', './fonts/fraunces-latin-wght-normal.woff2', './fonts/inter-latin-wght-normal.woff2', './icons/icon-192.png', './icons/icon-512.png', './icons/apple-touch-icon.png'
 ];
 
 self.addEventListener('install', (e) => {
