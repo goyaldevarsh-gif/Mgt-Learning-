@@ -611,12 +611,19 @@ if (window.matchMedia) {
 render();
 
 if ('serviceWorker' in navigator) {
+  var hadCtl = !!navigator.serviceWorker.controller, reloaded = false;
+  navigator.serviceWorker.addEventListener('controllerchange', function () {
+    if (!hadCtl) { hadCtl = true; return; }
+    if (reloaded) return; reloaded = true;
+    var el = document.activeElement, typing = el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA');
+    if (typing) return;
+    location.reload();
+  });
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('sw.js').then(function (reg) {
-      reg.addEventListener('updatefound', function () {
-        var w = reg.installing;
-        if (w) w.addEventListener('statechange', function () { if (w.state === 'activated' && navigator.serviceWorker.controller) { /* new version ready: applies on next open */ } });
-      });
+    navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }).then(function (reg) {
+      reg.update();
+      document.addEventListener('visibilitychange', function () { if (!document.hidden) reg.update(); });
+      setInterval(function () { reg.update(); }, 5 * 60 * 1000);
     }).catch(function () {});
   });
 }
