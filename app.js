@@ -6,10 +6,10 @@ var $app = document.getElementById('main');
 function isDesk() { return !!(window.matchMedia && matchMedia('(min-width: 960px)').matches); }
 
 /* ---------- storage ---------- */
-var S = { progress: {}, ui: { q: '', filter: 'All', mode: 'full', hideA2HS: false } };
+var S = { queue: [], progress: {}, ui: { q: '', filter: 'All', mode: 'full', hideA2HS: false } };
 try {
   var raw = localStorage.getItem(KEY);
-  if (raw) { var p = JSON.parse(raw); S.progress = p.progress || {}; S.ui = Object.assign(S.ui, p.ui || {}); }
+  if (raw) { var p = JSON.parse(raw); S.progress = p.progress || {}; S.queue = p.queue || []; S.ui = Object.assign(S.ui, p.ui || {}); }
 } catch (e) {}
 S.ui.q = '';
 function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
@@ -411,9 +411,21 @@ function homeView() {
   return h + tabbar('home');
 }
 
+function queueHtml() {
+  var open = S.queue.filter(function (x) { return !x.done; }).length;
+  var h = '<section class="queue"><h2 class="qh">To study <span class="qn">' + open + '</span></h2>' +
+    '<form class="qadd" data-qform="1"><input id="qin" type="text" placeholder="Add topic, e.g. Rotator cuff tear" autocomplete="off"><button class="btn primary" type="submit">Add</button></form><ul class="qlist">';
+  if (!S.queue.length) h += '<li class="qempty">Nothing queued. Add topics to read next.</li>';
+  S.queue.forEach(function (x, i) {
+    h += '<li class="' + (x.done ? 'done' : '') + '"><button class="qchk" data-act="qdone" data-i="' + i + '" aria-label="Done">' + (x.done ? '\u2713' : '') + '</button><span>' + esc(x.t) + '</span><button class="qdel" data-act="qdel" data-i="' + i + '" aria-label="Remove">\u2715</button></li>';
+  });
+  h += '</ul>' + (open ? '<button class="btn block" data-act="qcopy">Copy list to paste in chat</button>' : '') + '</section>';
+  return h;
+}
+
 function mineView() {
   var list = NOTES.filter(function (n) { var p = prog(n.slug); return p.weak || (p.note && p.note.trim()); });
-  var h = '<div class="top"><div class="brand"><h1>My Notes</h1><p>Weak topics and topics where you wrote notes</p></div></div><div class="list">';
+  var h = '<div class="top"><div class="brand"><h1>My Notes</h1><p>To-study list, weak topics and your notes</p></div></div>' + queueHtml() + '<h2 class="qh">Weak and noted</h2><div class="list">';
   if (!list.length) h += '<div class="empty">Nothing yet. Mark a topic weak or write a note inside a topic.</div>';
   list.forEach(function (n) {
     var p = prog(n.slug);
@@ -546,6 +558,13 @@ document.addEventListener('click', function (e) {
   var act = t.dataset.act, slug = t.dataset.slug;
   if (act === 'weak') { var p = prog(slug); p.weak = !p.weak; save(); rerenderKeepScroll(); }
   else if (act === 'revised') { var q = prog(slug); q.revised = q.revised && t.dataset.top ? null : Date.now(); if (q.revised) q.weak = false; save(); rerenderKeepScroll(); }
+  else if (act === 'qdone') { var qi = +t.dataset.i; if (S.queue[qi]) { S.queue[qi].done = !S.queue[qi].done; save(); rerenderKeepScroll(); } }
+  else if (act === 'qdel') { S.queue.splice(+t.dataset.i, 1); save(); rerenderKeepScroll(); }
+  else if (act === 'qcopy') {
+    var txt = 'To study (Ortho Notes):\n' + S.queue.filter(function (x) { return !x.done; }).map(function (x, i) { return (i + 1) + '. ' + x.t; }).join('\n');
+    var ok = function () { t.textContent = 'Copied'; };
+    if (navigator.clipboard) navigator.clipboard.writeText(txt).then(ok, function () {}); 
+  }
   else if (act === 'hideA2HS') { S.ui.hideA2HS = true; save(); rerenderKeepScroll(); }
   else if (act === 'copybk') {
     var ta = document.getElementById('bk'); ta.select();
@@ -569,6 +588,14 @@ document.addEventListener('click', function (e) {
 });
 
 var typingTimer = null;
+document.addEventListener('submit', function (e) {
+  if (!e.target.dataset.qform) return;
+  e.preventDefault();
+  var inp = document.getElementById('qin'), v = inp && inp.value.trim();
+  if (!v) return;
+  S.queue.push({ t: v, done: false, added: Date.now() }); save(); rerenderKeepScroll();
+  var n = document.getElementById('qin'); if (n) n.focus();
+});
 document.addEventListener('input', function (e) {
   if (e.target.id === 'sq') {
     S.ui.q = e.target.value; save();
