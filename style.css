@@ -300,3 +300,14 @@ figure.fig figcaption{font-size:.82em;margin-top:6px;opacity:.8}
 
 .subhead{margin:22px 0 10px;font-size:18px}
 .sitem.sub{margin-left:18px}
+
+.pg[data-pg]{cursor:pointer;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:2px}
+.pg[data-pg]:active{background:#E3D5A8}
+.pv{position:fixed;inset:0;z-index:999;background:#fff;display:flex;flex-direction:column;color:#1a1a1a}
+.pv-bar,.pv-nav{display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:2px solid #1a1a1a;background:#EFE8D6}
+.pv-nav{border-bottom:0;border-top:2px solid #1a1a1a;justify-content:space-between}
+.pv-sp{flex:1}.pv-t{font-size:14px}.pv-lbl{font-weight:700;font-size:14px}.pv-lbl small{font-weight:400}
+.pv button,.pv-file{font:inherit;font-size:14px;font-weight:700;background:#fff;color:#1a1a1a;border:2px solid #1a1a1a;border-radius:10px;padding:6px 12px;cursor:pointer}
+.pv-body{flex:1;overflow:auto;-webkit-overflow-scrolling:touch;background:#ddd}
+.pv-body canvas{display:block;margin:0 auto;background:#fff}
+.pv-m{padding:24px 18px;background:#fff;margin:16px;border:2px solid #1a1a1a;border-radius:12px}

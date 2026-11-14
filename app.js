@@ -39,7 +39,7 @@ function inline(s) {
   s = esc(s);
   s = s.replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
   s = s.replace(/`([^`]+)`/g, '<code>$1</code>');
-  s = s.replace(/\[\[(p\.[^\]]+)\]\]/g, '<span class="pg">$1</span>');
+  s = s.replace(/\[\[(p\.(\d+)[^\]]*)\]\]/g, '<span class="pg" role="button" tabindex="0" data-pg="$2">$1</span>');
   s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
   s = s.replace(/(^|[^*\w])\*([^*\s][^*]*?)\*(?![*\w])/g, '$1<em>$2</em>');
   return s;
