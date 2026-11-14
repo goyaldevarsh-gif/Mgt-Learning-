@@ -9,7 +9,7 @@ function isDesk() { return !!(window.matchMedia && matchMedia('(min-width: 960px
 var S = { queue: [], progress: {}, ui: { q: '', filter: 'All', mode: 'full', hideA2HS: false } };
 try {
   var raw = localStorage.getItem(KEY);
-  if (raw) { var p = JSON.parse(raw); S.progress = p.progress || {}; S.queue = p.queue || []; S.ui = Object.assign(S.ui, p.ui || {}); }
+  if (raw) { var p = JSON.parse(raw); S.progress = p.progress || {}; S.queue = (p.queue || []).map(function (x, i) { x.id = x.id || ('l' + (x.added || Date.now()) + i); x.u = x.u || x.added || 0; return x; }); S.ui = Object.assign(S.ui, p.ui || {}); }
 } catch (e) {}
 S.ui.q = '';
 function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
@@ -411,16 +411,62 @@ function homeView() {
   return h + tabbar('home');
 }
 
+var GH = { repo: 'goyaldevarsh-gif/Mgt-Learning-', branch: 'data', file: 'queue.json' }, qTimer = null, qBusy = false, qStat = '';
+function qVisible() { return S.queue.filter(function (x) { return !x.del; }); }
+function qTouch(x) { x.u = Date.now(); }
+function setQStat(t) { qStat = t; var el = document.getElementById('qstat'); if (el) el.textContent = t; }
+function b64enc(str) { return btoa(unescape(encodeURIComponent(str))); }
+function b64dec(str) { return decodeURIComponent(escape(atob(str.replace(/\s/g, '')))); }
+function qMerge(a, b) {
+  var m = {};
+  (a || []).concat(b || []).forEach(function (x) { if (x && x.id && (!m[x.id] || (x.u || 0) > (m[x.id].u || 0))) m[x.id] = x; });
+  return Object.keys(m).map(function (k) { return m[k]; }).sort(function (x, y) { return (x.added || 0) - (y.added || 0); });
+}
+function syncQueue() {
+  if (!S.ui.ghToken) return;
+  clearTimeout(qTimer);
+  qTimer = setTimeout(doSync, 700);
+}
+function doSync() {
+  if (!S.ui.ghToken || qBusy) { if (qBusy) syncQueue(); return; }
+  qBusy = true; setQStat('Syncing...');
+  var url = 'https://api.github.com/repos/' + GH.repo + '/contents/' + GH.file;
+  var hd = { Authorization: 'Bearer ' + S.ui.ghToken, Accept: 'application/vnd.github+json' };
+  fetch(url + '?ref=' + GH.branch + '&_=' + Date.now(), { headers: hd, cache: 'no-store' }).then(function (r) {
+    if (r.status === 401 || r.status === 403 || r.status === 404) throw new Error('auth' + r.status);
+    if (!r.ok) throw new Error('http' + r.status);
+    return r.json();
+  }).then(function (f) {
+    var remote = []; try { remote = JSON.parse(b64dec(f.content)).items || []; } catch (e) {}
+    var merged = qMerge(remote, S.queue);
+    var same = JSON.stringify(qMerge(remote, [])) === JSON.stringify(merged);
+    S.queue = merged; save();
+    if (same) return;
+    return fetch(url, { method: 'PUT', headers: hd, body: JSON.stringify({ message: 'Sync to-study list', branch: GH.branch, sha: f.sha, content: b64enc(JSON.stringify({ items: merged }, null, 1)) }) }).then(function (r) {
+      if (r.status === 409 || r.status === 422) { qBusy = false; syncQueue(); throw new Error('retry'); }
+      if (!r.ok) throw new Error('put' + r.status);
+    });
+  }).then(function () {
+    qBusy = false; setQStat('Synced ' + new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
+    var ul = document.querySelector('.qlist'); if (ul && document.activeElement.id !== 'qin') rerenderKeepScroll();
+  }).catch(function (e) {
+    qBusy = false;
+    if (e.message === 'retry') return;
+    setQStat(/^auth/.test(e.message) ? 'Token rejected. Check access to the repo (Contents: read and write).' : 'Offline, will sync later');
+  });
+}
 function queueHtml() {
-  var open = S.queue.filter(function (x) { return !x.done; }).length;
+  var vis = qVisible(), open = vis.filter(function (x) { return !x.done; }).length;
   var h = '<section class="queue"><h2 class="qh">To study <span class="qn">' + open + '</span></h2>' +
     '<form class="qadd" data-qform="1"><input id="qin" type="text" placeholder="Add topic, e.g. Rotator cuff tear" autocomplete="off"><button class="btn primary" type="submit">Add</button></form><ul class="qlist">';
-  if (!S.queue.length) h += '<li class="qempty">Nothing queued. Add topics to read next.</li>';
-  S.queue.forEach(function (x, i) {
-    h += '<li class="' + (x.done ? 'done' : '') + '"><button class="qchk" data-act="qdone" data-i="' + i + '" aria-label="Done">' + (x.done ? '\u2713' : '') + '</button><span>' + esc(x.t) + '</span><button class="qdel" data-act="qdel" data-i="' + i + '" aria-label="Remove">\u2715</button></li>';
+  if (!vis.length) h += '<li class="qempty">Nothing queued. Add topics to read next.</li>';
+  vis.forEach(function (x) {
+    h += '<li class="' + (x.done ? 'done' : '') + '"><button class="qchk" data-act="qdone" data-id="' + x.id + '" aria-label="Done">' + (x.done ? '✓' : '') + '</button><span>' + esc(x.t) + '</span><button class="qdel" data-act="qdel" data-id="' + x.id + '" aria-label="Remove">✕</button></li>';
   });
-  h += '</ul>' + (open ? '<button class="btn block" data-act="qcopy">Copy list to paste in chat</button>' : '') + '</section>';
-  return h;
+  h += '</ul>';
+  if (S.ui.ghToken) h += '<div class="qsync"><span id="qstat">' + esc(qStat || 'Auto-sync on') + '</span><button class="btn sm" data-act="qsyncnow">Sync now</button><button class="btn sm" data-act="qdisc">Disconnect</button></div>';
+  else h += '<details class="qsync2"><summary>Connect auto-sync with Claude</summary><p>Paste a GitHub fine-grained token (only this repo, Contents: read and write). Stays on this device.</p><input id="qtok" type="password" placeholder="github_pat_..." autocomplete="off"><button class="btn primary block" data-act="qconnect">Connect</button></details>';
+  return h + '</section>';
 }
 
 function mineView() {
@@ -558,13 +604,11 @@ document.addEventListener('click', function (e) {
   var act = t.dataset.act, slug = t.dataset.slug;
   if (act === 'weak') { var p = prog(slug); p.weak = !p.weak; save(); rerenderKeepScroll(); }
   else if (act === 'revised') { var q = prog(slug); q.revised = q.revised && t.dataset.top ? null : Date.now(); if (q.revised) q.weak = false; save(); rerenderKeepScroll(); }
-  else if (act === 'qdone') { var qi = +t.dataset.i; if (S.queue[qi]) { S.queue[qi].done = !S.queue[qi].done; save(); rerenderKeepScroll(); } }
-  else if (act === 'qdel') { S.queue.splice(+t.dataset.i, 1); save(); rerenderKeepScroll(); }
-  else if (act === 'qcopy') {
-    var txt = 'To study (Ortho Notes):\n' + S.queue.filter(function (x) { return !x.done; }).map(function (x, i) { return (i + 1) + '. ' + x.t; }).join('\n');
-    var ok = function () { t.textContent = 'Copied'; };
-    if (navigator.clipboard) navigator.clipboard.writeText(txt).then(ok, function () {}); 
-  }
+  else if (act === 'qdone') { var qx = S.queue.filter(function (x) { return x.id === t.dataset.id; })[0]; if (qx) { qx.done = !qx.done; qTouch(qx); save(); syncQueue(); rerenderKeepScroll(); } }
+  else if (act === 'qdel') { var qy = S.queue.filter(function (x) { return x.id === t.dataset.id; })[0]; if (qy) { qy.del = true; qTouch(qy); save(); syncQueue(); rerenderKeepScroll(); } }
+  else if (act === 'qsyncnow') { doSync(); }
+  else if (act === 'qdisc') { S.ui.ghToken = ''; save(); setQStat(''); rerenderKeepScroll(); }
+  else if (act === 'qconnect') { var tk = (document.getElementById('qtok') || {}).value; if (tk && tk.trim()) { S.ui.ghToken = tk.trim(); save(); rerenderKeepScroll(); doSync(); } }
   else if (act === 'hideA2HS') { S.ui.hideA2HS = true; save(); rerenderKeepScroll(); }
   else if (act === 'copybk') {
     var ta = document.getElementById('bk'); ta.select();
@@ -593,7 +637,7 @@ document.addEventListener('submit', function (e) {
   e.preventDefault();
   var inp = document.getElementById('qin'), v = inp && inp.value.trim();
   if (!v) return;
-  S.queue.push({ t: v, done: false, added: Date.now() }); save(); rerenderKeepScroll();
+  var nowt = Date.now(); S.queue.push({ id: 'q' + nowt + Math.random().toString(36).slice(2, 6), t: v, done: false, added: nowt, u: nowt }); save(); syncQueue(); rerenderKeepScroll();
   var n = document.getElementById('qin'); if (n) n.focus();
 });
 document.addEventListener('input', function (e) {
@@ -644,6 +688,8 @@ if (window.matchMedia) {
 }
 
 render();
+syncQueue();
+document.addEventListener('visibilitychange', function () { if (!document.hidden) syncQueue(); });
 
 if ('serviceWorker' in navigator) {
   var hadCtl = !!navigator.serviceWorker.controller, reloaded = false;
