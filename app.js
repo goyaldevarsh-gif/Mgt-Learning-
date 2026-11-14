@@ -2,7 +2,8 @@
 'use strict';
 var NOTES = window.NOTES || [];
 var KEY = 'ortho-notes-v1';
-var $app = document.getElementById('app');
+var $app = document.getElementById('main');
+function isDesk() { return !!(window.matchMedia && matchMedia('(min-width: 960px)').matches); }
 
 /* ---------- storage ---------- */
 var S = { progress: {}, ui: { q: '', filter: 'All', mode: 'full', hideA2HS: false } };
@@ -380,7 +381,7 @@ function tabbar(active) {
 }
 
 function homeView() {
-  var searching = !!S.ui.q.trim();
+  var searching = !!S.ui.q.trim() && !isDesk();
   var list = NOTES.filter(function (n) { return S.ui.filter === 'All' || n.tags.indexOf(S.ui.filter) >= 0; });
   var revised = NOTES.filter(function (n) { return prog(n.slug).revised; }).length;
   var weak = NOTES.filter(function (n) { return prog(n.slug).weak; }).length;
@@ -388,7 +389,7 @@ function homeView() {
     .concat(NOTES.filter(function (n) { return prog(n.slug).revised; }).sort(function (a, b) { return prog(a.slug).revised - prog(b.slug).revised; }));
   var weakFirst = NOTES.filter(function (n) { return prog(n.slug).weak; })[0];
   var next = weakFirst || order[0];
-  var h = '<div class="top"><div class="brandrow"><img class="logo" src="icons/icon-192.png" alt=""><div class="brand"><h1>Ortho<br>Notes</h1><p>' + NOTES.length + ' topics, OPD to OT</p></div></div>' +
+  var h = '<div class="top home-top"><div class="brandrow"><img class="logo" src="icons/icon-192.png" alt=""><div class="brand"><h1>Ortho<br>Notes</h1><p>' + NOTES.length + ' topics, OPD to OT</p></div></div>' +
     '<a class="btn sm" href="#/backup"><span class="ic">' + IC.save + '</span>Backup</a></div>';
   var standalone = window.navigator.standalone || (window.matchMedia && matchMedia('(display-mode: standalone)').matches);
   if (!standalone && !S.ui.hideA2HS && /iphone|ipad/i.test(navigator.userAgent)) {
@@ -451,6 +452,29 @@ function backupView(msg, err) {
     '<p class="hint">To restore, clear the box, paste the backup there, then tap Restore.</p>' + tabbar('more');
 }
 
+/* ---------- desktop sidebar ---------- */
+function sideBodyHtml() {
+  var q = S.ui.q.trim();
+  if (q) return resultsHtml(S.ui.q);
+  var cur = parseHash().slug;
+  var h = '<div class="chips">' + allTags().map(function (t) { return '<button class="chip ' + (t === 'All' ? '' : tagClass(t)) + (t === S.ui.filter ? ' on' : '') + '" data-filter="' + esc(t) + '">' + esc(tagLabel(t)) + '</button>'; }).join('') + '</div><div class="slist">';
+  NOTES.filter(function (n) { return S.ui.filter === 'All' || n.tags.indexOf(S.ui.filter) >= 0; }).forEach(function (n) {
+    var pr = prog(n.slug);
+    h += '<a class="sitem' + (n.slug === cur ? ' on' : '') + '" href="#/t/' + n.slug + '">' + tile(n) + '<span class="st"><b>' + esc(n.title) + '</b><small>' + n.tags.map(tagLabel).join(' · ') + '</small></span>' + (pr.weak ? '<i class="dot weak" title="Weak"></i>' : pr.revised ? '<i class="dot ok" title="Revised"></i>' : '') + '</a>';
+  });
+  return h + '</div>';
+}
+function renderSide() {
+  var side = document.getElementById('side');
+  if (!side || !isDesk()) return;
+  var st = side.scrollTop, hasQ = !!S.ui.q.trim();
+  side.innerHTML = '<a class="sbrand" href="#/"><img class="logo" src="icons/icon-192.png" alt=""><span><b>Ortho Notes</b><small>' + NOTES.length + ' topics · OPD to OT</small></span></a>' +
+    '<div class="searchwrap"><span class="ic sic">' + IC.search + '</span><input class="search" id="sq" type="text" inputmode="search" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="Search anything   ( / )" value="' + esc(S.ui.q) + '" autocomplete="off"><button class="clear" data-clear="1" aria-label="Clear"' + (hasQ ? '' : ' hidden') + '>✕</button></div>' +
+    '<div id="sresults" class="sresults">' + sideBodyHtml() + '</div>' +
+    '<nav class="snav"><a href="#/">Home</a><a href="#/mine">My Notes</a><a href="#/backup">Backup</a><span>v ' + esc(window.NOTES_VERSION || '') + '</span></nav>';
+  side.scrollTop = st;
+}
+
 /* ---------- router ---------- */
 function draw(quiet) {
   clearFind();
@@ -459,6 +483,7 @@ function draw(quiet) {
   else if (h.view === 'backup') $app.innerHTML = backupView();
   else if (h.view === 'mine') $app.innerHTML = mineView();
   else $app.innerHTML = homeView();
+  renderSide();
   return h;
 }
 function render() {
@@ -482,12 +507,20 @@ document.addEventListener('click', function (e) {
     e.preventDefault();
     if (location.hash !== '' && location.hash !== '#/') location.hash = '#/';
     S.ui.filter = 'All'; draw(true); window.scrollTo(0, 0);
-    var qi = document.getElementById('q'); if (qi) { qi.focus(); qi.select(); }
+    var qi = document.getElementById(isDesk() ? 'sq' : 'q'); if (qi) { qi.focus(); qi.select(); }
     return;
   }
-  if (t.dataset.more) { expanded[t.dataset.more] = !expanded[t.dataset.more]; var y0 = window.scrollY; $app.innerHTML = homeView(); window.scrollTo(0, y0); return; }
-  if (t.dataset.q) { S.ui.q = t.dataset.q; save(); $app.innerHTML = homeView(); window.scrollTo(0, 0); return; }
-  if (t.dataset.clear) { S.ui.q = ''; save(); $app.innerHTML = homeView(); var q2 = document.getElementById('q'); if (q2) q2.focus(); return; }
+  if (t.dataset.more) {
+    expanded[t.dataset.more] = !expanded[t.dataset.more];
+    if (isDesk()) { var sr0 = document.getElementById('sresults'); if (sr0) sr0.innerHTML = sideBodyHtml(); return; }
+    var y0 = window.scrollY; $app.innerHTML = homeView(); window.scrollTo(0, y0); return;
+  }
+  if (t.dataset.q) { S.ui.q = t.dataset.q; save(); if (isDesk()) renderSide(); else { $app.innerHTML = homeView(); window.scrollTo(0, 0); } return; }
+  if (t.dataset.clear) {
+    S.ui.q = ''; save();
+    if (isDesk()) { renderSide(); var sq0 = document.getElementById('sq'); if (sq0) sq0.focus(); return; }
+    $app.innerHTML = homeView(); var q2 = document.getElementById('q'); if (q2) q2.focus(); return;
+  }
   if (t.dataset.find) {
     if (t.dataset.find === 'next') gotoFind(FIND.cur + 1);
     else if (t.dataset.find === 'prev') gotoFind(FIND.cur - 1);
@@ -529,7 +562,14 @@ document.addEventListener('click', function (e) {
 
 var typingTimer = null;
 document.addEventListener('input', function (e) {
-  if (e.target.id === 'q') {
+  if (e.target.id === 'sq') {
+    S.ui.q = e.target.value; save();
+    clearTimeout(typingTimer);
+    typingTimer = setTimeout(function () {
+      var sr = document.getElementById('sresults'); if (sr) sr.innerHTML = sideBodyHtml();
+      var cb = document.querySelector('#side .clear'); if (cb) cb.hidden = !S.ui.q.trim();
+    }, 90);
+  } else if (e.target.id === 'q') {
     S.ui.q = e.target.value; save();
     clearTimeout(typingTimer);
     var pos = e.target.selectionStart;
@@ -546,6 +586,27 @@ document.addEventListener('input', function (e) {
     if (h.view === 'topic') { prog(h.slug).note = e.target.value; save(); }
   }
 });
+
+document.addEventListener('keydown', function (e) {
+  var tag = (e.target.tagName || '').toLowerCase(), typing = tag === 'input' || tag === 'textarea';
+  if (e.key === '/' && !typing && !e.metaKey && !e.ctrlKey) {
+    var si = document.getElementById(isDesk() ? 'sq' : 'q');
+    if (si) { e.preventDefault(); si.focus(); si.select(); }
+  } else if (e.key === 'Escape') {
+    if (typing && (e.target.id === 'sq' || e.target.id === 'q')) {
+      S.ui.q = ''; save(); e.target.blur();
+      if (isDesk()) renderSide(); else $app.innerHTML = homeView();
+    } else if (FIND.els.length) { clearFind(); history.replaceState(null, '', '#/t/' + parseHash().slug); }
+  } else if (!typing && FIND.els.length && (e.key === 'n' || e.key === 'N' || e.key === 'Enter')) {
+    e.preventDefault();
+    gotoFind(FIND.cur + (e.shiftKey || e.key === 'N' ? -1 : 1));
+  }
+});
+if (window.matchMedia) {
+  var mq = matchMedia('(min-width: 960px)');
+  if (mq.addEventListener) mq.addEventListener('change', function () { render(); });
+  else if (mq.addListener) mq.addListener(function () { render(); });
+}
 
 render();
 

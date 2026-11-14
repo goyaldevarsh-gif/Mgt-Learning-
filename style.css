@@ -218,3 +218,74 @@ tr.cur td{background:var(--amber-soft)!important}
 .findbar button{flex:none;width:40px;height:40px;border-radius:12px;border:0;background:#2A2A2A;color:#fff;font:700 15px var(--sans);cursor:pointer}
 .findbar .fq{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font:600 14px var(--sans)}
 #findcount{flex:none;font:700 13px var(--sans);color:var(--amber)}
+
+/* ---------- responsive: laptop / desktop ---------- */
+.side{display:none}
+.sbrand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);margin-bottom:14px}
+.sbrand .logo{width:48px;height:48px;border-radius:12px}
+.sbrand b{display:block;font:800 22px/1.05 var(--serif);letter-spacing:-.02em}
+.sbrand small{font-size:12px;color:var(--muted);font-weight:500}
+.sresults{margin-top:6px;flex:1}
+.slist{display:grid;gap:4px;margin-top:2px}
+.sitem{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:12px;text-decoration:none;color:var(--ink);border:2px solid transparent}
+.sitem:hover{background:#F6F4EC}
+.sitem.on{background:var(--accent-soft);border-color:var(--ink)}
+.sitem .tile{width:36px;height:36px;border-radius:9px}
+.sitem .tile .ic svg{width:20px;height:20px}
+.sitem .st{flex:1;min-width:0}
+.sitem b{display:block;font:700 14.5px/1.25 var(--sans)}
+.sitem small{display:block;font-size:11.5px;color:var(--muted);margin-top:1px}
+.dot{flex:none;width:10px;height:10px;border-radius:50%;border:2px solid var(--ink);background:#fff}
+.dot.ok{background:var(--accent);border-color:var(--accent)}
+.dot.weak{background:var(--bad);border-color:var(--bad)}
+.snav{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin-top:14px;padding-top:12px;border-top:2px solid var(--ink);font:700 13px var(--sans)}
+.snav a{color:var(--accent);text-decoration:none}
+.snav a:hover{text-decoration:underline}
+.snav span{margin-left:auto;font-weight:500;color:var(--muted);font-size:11.5px}
+.side .chips{padding:8px 0 8px}
+.side .group{margin-bottom:10px}
+button[hidden]{display:none!important}
+
+@media (min-width:600px) and (max-width:959px){
+  .app{max-width:760px}
+  .list{grid-template-columns:1fr 1fr}
+}
+@media (min-width:960px){
+  body{font-size:17px}
+  .app{max-width:none;padding:0}
+  .shell{display:grid;grid-template-columns:370px minmax(0,1fr);min-height:100vh}
+  .side{display:flex;flex-direction:column;position:sticky;top:0;height:100vh;overflow-y:auto;background:#fff;border-right:2px solid var(--ink);padding:20px 16px 16px}
+  .main{padding:32px 56px 90px;max-width:1040px;width:100%}
+  .tabbar{display:none}
+  .home-top{display:none}
+  .main .searchwrap{display:none}
+  .main .top{margin-bottom:20px}
+  .list{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .card{cursor:pointer;transition:transform .12s,box-shadow .12s}
+  .card:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--ink)}
+  .bar{margin:-32px -56px 18px;padding:14px 56px;justify-content:flex-end;border-bottom:2px solid var(--ink)}
+  .back{display:none}
+  .pillbtn{cursor:pointer}
+  .pillbtn:hover,.btn:hover,.chip:hover{filter:brightness(.96)}
+  .title{font-size:42px;margin-top:14px}
+  .art{max-width:780px}
+  .art h2{font-size:29px}
+  .art h3{font-size:18px}
+  .tw{max-width:900px}
+  .seg{max-width:380px}
+  .notes,.actions,.pn{max-width:780px}
+  .stats{max-width:520px}
+  .next{max-width:640px}
+  .findbar{left:calc(370px + 28px);right:28px;margin:0;max-width:560px}
+  .toc a:hover{background:var(--accent-soft)}
+  .hit:hover{background:#F6F4EC}
+  .backup textarea,.notes textarea{max-width:780px}
+}
+@media (min-width:1500px){
+  .shell{grid-template-columns:400px minmax(0,1fr)}
+  .main{max-width:1180px;padding-left:72px}
+  .art{max-width:860px}
+  .findbar{left:calc(400px + 28px)}
+  .bar{margin-left:-72px;padding-left:72px}
+}
+.side .chips{flex-wrap:wrap;overflow:visible}
