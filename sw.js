@@ -1,4 +1,4 @@
-const CACHE = 'ortho-notes-54b5245c88';
+const CACHE = 'ortho-notes-3a9b5b4f53';
 const ASSETS = [
   './', './index.html', './style.css', './app.js', './notes-data.js',
   './manifest.webmanifest', './fonts/fraunces-latin-wght-normal.woff2', './fonts/inter-latin-wght-normal.woff2', './icons/icon-192.png', './icons/icon-512.png', './icons/apple-touch-icon.png'
