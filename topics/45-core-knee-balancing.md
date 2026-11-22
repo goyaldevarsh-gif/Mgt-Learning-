@@ -10,6 +10,61 @@ order: 45
 
 CORE to CORA course (Conceptual Orthopaedics, Noida, 20-22 Nov 2026), Day 1. Slide photos neeche hain. **Added** points mere hain, speaker ke nahi.
 
+## Major takeaways
+> [!tip] Sabse zaroori 6 points
+> 1. **Osteophytes pehle, ligament release baad mein.** Osteophytes capsule aur sMCL ko tent karte hain aur tightness ka dhokha dete hain. Hatane se aksar release ki zaroorat hi nahi padti.
+> 2. **Optimum balance:** extension aur 90° flexion dono mein stable, dono gaps rectangular (medial = lateral), aur extension gap = flexion gap.
+> 3. **Gap ke hisaab se release:** sirf extension tight to posterior structures (posteromedial capsule/POL/semimembranosus; lateral mein ITB aur posterolateral capsule). Sirf flexion tight to anterior sMCL/deep MCL (lateral mein popliteus, LCL).
+> 4. **Central sMCL (isometric pivot) primary TKR mein na kaato**, wahi stability deta hai.
+> 5. **Chhote steps mein release, har step ke baad spacer se re-check.** Release irreversible hai.
+> 6. **Maapne ka koi gold standard nahi:** tactile, tensioner (~10-20 lb), sensor, robot. Zaroori hai ek consistent, reproducible method.
+
+| Kya change karte ho | Extension gap | Flexion gap |
+|---|---|---|
+| Tibial cut | Badalta hai | Badalta hai (dono barabar) |
+| Distal femoral cut | Badalta hai | Nahi |
+| Posterior condyle cut / femur size / AP position | Nahi | Badalta hai |
+| Tibial slope, PCL | Nahi | Badalta hai |
+| Posterior capsule, posterior osteophytes | Badalta hai | Nahi |
+| Femoral axial rotation | Medial-lateral balance (flexion mein) | Haan |
+
+| Problem (standard rule, speaker slide se confirm) | Fix |
+|---|---|
+| Tight extension, flexion theek | Distal femur recut ya posterior capsule release / osteophytes |
+| Tight flexion, extension theek | Femur downsize, slope badhao, PCL recess (CR) |
+| Dono tight | Tibia aur recut ya patla insert |
+| Loose flexion, extension theek | Femur upsize ya posterior augment |
+| Loose extension, flexion theek | Distal femoral augment |
+| Dono loose | Thicker insert |
+
+:::flow
+[teal] 1. Bone cuts | Alignment correct
+v
+[teal] 2. Osteophytes | Sab hatao, phir gaps check
+v
+[amber] 3. Gap check | Extension aur 90° flexion, varus-valgus stress
+v
+[red] 4. Chhota release | Matching structure, phir re-check
+v
+[red] 5. Agar bahut release lag raha | Constraint badhao, aur release mat karo
+:::
+
+> [!flag] Kab ruko
+> Lambi release series ya >~3-5 mm opening ya mid-flexion instability ho to aur release nahi, zyada constrained implant socho.
+
+:::qa Release se pehle osteophytes kyun?
+Wo capsule/sMCL ko tent karke tightness mimic karte hain. Hatane se true length wapas aati hai, over-release aur instability se bachte ho, aur trial/tensioner sahi baithta hai.
+:::
+
+:::qa Distal femoral cut aur tibial cut mein gap par kya farak?
+Tibial cut dono gaps ko barabar badalta hai. Distal femur cut sirf extension gap ko.
+:::
+
+:::qa Flexion gap kin cheezon se control hota hai?
+Femoral AP size/position, posterior condylar resection, femoral axial rotation, sagittal tilt. Standard text: tibial slope aur PCL bhi.
+:::
+
+
 ## Talk 6: Soft-tissue balancing - which structure is tight where (slide)
 | | Taut in extension (0 deg) | Taut in flexion (90 deg) | Taut across full arc |
 |---|---|---|---|

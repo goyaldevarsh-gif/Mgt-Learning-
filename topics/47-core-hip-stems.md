@@ -10,6 +10,49 @@ order: 47
 
 CORE to CORA course (Conceptual Orthopaedics, Noida, 20-22 Nov 2026), Day 2. Slide photos neeche hain. **Added** points mere hain, speaker ke nahi.
 
+## Major takeaways
+> [!tip] Sabse zaroori 6 points
+> 1. **Cemented stems do tarah ke:** composite beam (rough/matt, cement se bonded, koi subsidence nahi, Charnley) aur taper-slip (polished, collarless, 1-2 mm subsidence intended, Exeter). Registry mein polished taper-slip ka record behtar.
+> 2. **Composite beam mein movement = debonding = failure sign.** Taper-slip mein thoda subsidence normal, par poor/fragmented cement mantle failure hai.
+> 3. **Cementless fixation do phase:** primary (press-fit, turant) aur secondary (bone ingrowth/ongrowth, 6-12 hafte). Micromotion <40 um ideal, >150 um = sirf fibrous tissue.
+> 4. **Stress shielding:** stiff, distally fixed, canal-filling stem proximal femur ko unload karta hai, Gruen zones 1 aur 7 mein resorption. Stem stiffness ~diameter ka 4th power. Prevent: proximal fixation, tapered/short Ti stem, oversize mat karo.
+> 5. **Khanuja stem types ka hook:** 1, 2, 6 = metaphysis. 3 = metaphyseal-diaphyseal junction. 4 = diaphysis. 5 = modular. Speaker 5 working groups mein simplify karta hai.
+> 6. **Dorr A (champagne-flute) femur = single wedge, Dorr C = zyada fixation chahiye.**
+
+| | Composite beam | Taper-slip (polished) |
+|---|---|---|
+| Surface | Rough / matt | Mirror polished |
+| Cement bond | Haan | Nahi (debonded) |
+| Subsidence | Nahi hona chahiye | 1-2 mm intended |
+| Collar | Aksar | Nahi |
+| Example | Charnley, Muller | Exeter, CPT, Lubinus SP II |
+| Failure | Debond → micromotion → osteolysis | Poor mantle, malalignment |
+
+| Khanuja type | Shape | Fixation |
+|---|---|---|
+| 1 | Single wedge | Metaphysis |
+| 2 | Double wedge | Metaphysis |
+| 3A/3B/3C | Tapered round / spline / rectangle | Metaphyseal-diaphyseal |
+| 4 | Cylindrical, fully coated | Diaphysis (stress shielding zyada) |
+| 5 | Modular | Variable (junction corrosion risk) |
+| 6 | Anatomic | Metaphysis |
+
+> [!verify] Speaker se confirm
+> "Kheir short stem -7" (circled), Wagner-type stem type 3 vs 4, aur kaun se stems composite beam/polished taper ke examples bataye.
+
+:::qa Polished taper stem mein subsidence kab normal aur kab failure?
+1-2 mm creep normal hai, taper cement ko compression mein load karta hai. Excessive subsidence, rotation ya fragmented/deficient cement failure hai.
+:::
+
+:::qa Stress shielding kaise reduce karte ho?
+Proximal (metaphyseal) fixation, tapered ya short stem, titanium/lower modulus design, stem oversize nahi karna, neck-preserving short stems.
+:::
+
+:::qa Primary vs secondary stability?
+Primary: press-fit se turant mechanical stability (geometry, canal prep, bone quality). Secondary: baad mein bone ingrowth/ongrowth, primary stability uski prerequisite hai.
+:::
+
+
 ### Cemented femoral stems: composite beam vs taper-slip (polished tapered) [standard text; Devarsh asked for the table, confirm against the speaker's slide]
 | Feature | Composite beam | Taper-slip (polished tapered) |
 |---|---|---|

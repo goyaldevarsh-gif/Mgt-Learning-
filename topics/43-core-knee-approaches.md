@@ -10,6 +10,48 @@ order: 43
 
 CORE to CORA course (Conceptual Orthopaedics, Noida, 20-22 Nov 2026), Day 1. Slide photos neeche hain. **Added** points mere hain, speaker ke nahi.
 
+## Major takeaways
+> [!tip] Sabse zaroori 6 points
+> 1. **Skin ka blood supply medial se lateral aata hai.** Multiple vertical scars mein lateral-most incision use karo. Naye incision aur purane scar ke beech >=5 cm skin bridge. Horizontal scar ko 90° par (kam se kam 60°) cross karo.
+> 2. **Flaps hamesha deep fascia ke neeche uthao.** Fat mein plane banaoge to skin ki perforators kat jayengi, wound necrosis aur PJI ka risk.
+> 3. **Medial parapatellar = workhorse.** Step 1 yaad rakho: eversion se pehle lateral plica extension mein release, taaki patellar tendon avulsion na ho.
+> 4. **Patella ka blood supply:** medial arthrotomy + fat-pad excision + lateral release teeno se kat sakta hai. SLGA aakhri supply ho sakti hai, to unnecessary lateral release avoid karo.
+> 5. **Subvastus aur midvastus** muscle-sparing hain (early quad recovery, kam pain), par subvastus obese, bulky VMO, short femur mein avoid. Long-term outcome mein farak chhota.
+> 6. **Difficult exposure ka ladder:** quad snip (sabse kam morbid) → V-Y turndown → tibial tubercle osteotomy. Snip jaldi lo, tendon avulsion se pehle.
+
+| | Medial parapatellar | Midvastus | Subvastus |
+|---|---|---|---|
+| Route | Quadriceps tendon se | VMO fibres ke along | VMO ke neeche, septum se |
+| VMO insertion | Cut | Safe | Safe |
+| Lateral release | Zyada zaroorat | Kam | Kam |
+| Khaas risk | Maltracking, patellar blood supply | VMO denervation | Haematoma, VMO overstretch |
+
+:::flow
+[teal] Exposure mushkil | Flexion nahi mil raha ya tendon par tension
+v
+[amber] 1. Lateral plica release | Extension mein
+v
+[amber] 2. Quad snip | Oblique proximal extension
+v
+[red] 3. V-Y turndown ;; 4. Tibial tubercle osteotomy | Bahut stiff ya revision type knee
+:::
+
+> [!flag] Tendon avulsion ho raha hai
+> Rukk jao. Headed pin/anchor se tubercle par fix karo ya snip/V-Y/TTO karo. Zabardasti eversion mat karo.
+
+:::qa Multiple vertical scars mein kaunsa incision?
+Lateral-most. Skin ka supply medial se aata hai, to lateral flap necrosis se bachne ke liye medial scar ke upar nahi jate.
+:::
+
+:::qa Patella ka blood supply kaise bachate ho?
+Fat-pad excision aur lateral release ko dhyan se karo. Component rotation aur alignment sahi karo taaki lateral release kam lage. SLGA ko preserve karo.
+:::
+
+:::qa Valgus knee >20° mein kaunsa approach?
+Anterolateral (Keblish-type) approach with coronal Z-plasty of lateral retinaculum.
+:::
+
+
 ## Talk 4: Surgical Approaches in Primary TKA - Before the incision: previous skin incisions (slide)
 - Multiple vertical scars: skin supply runs medial to lateral, so use the lateral-most incision to avoid lateral flap necrosis (X on medial scar, tick on lateral).
 - New incision: keep a skin bridge of at least 5 cm from any old scar.

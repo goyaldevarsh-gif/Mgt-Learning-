@@ -10,6 +10,67 @@ order: 42
 
 CORE to CORA course (Conceptual Orthopaedics, Noida, 20-22 Nov 2026), Day 1. Slide photos neeche hain. **Added** points mere hain, speaker ke nahi.
 
+## Major takeaways
+> [!tip] Sabse zaroori 7 points
+> 1. **Teeno match karne chahiye:** symptoms + examination + X-ray. "Treat the patient, not the X-ray."
+> 2. **TKR indications:** painful, unstable, decreased ROM. Main indication pain hai (night/rest pain, walking limit) arthritis aur failed non-op care ke saath.
+> 3. **Resting ya night pain knee OA mein = kuch aur ho sakta hai:** infection, crystal, SONK/insufficiency fracture, referred hip/spine pain, tumour. Pehle work-up.
+> 4. **Risk ek number se nahi:** diabetes, obesity, anaemia, kidney, nutrition, smoking cluster karte hain. Threshold ka kaam optimisation trigger karna hai, mareez ko mana karna nahi.
+> 5. **Glucose:** HbA1c <8% (ADA 2026, 3 mahine ke andar), practical <7.5%. Peri-op glucose 100-180 mg/dL. HbA1c anaemia, CKD, haemoglobinopathy mein unreliable: fructosamine use karo.
+> 6. **Anaemia:** screen >=4 hafte pehle, Hb <13 (dono sex) = treat. Iron deficiency: ferritin <30 (ya <100 inflammation mein), TSAT <20%. Routine transfusion nahi.
+> 7. **Kidney:** creatinine nahi, eGFR (CKD-EPI) + trend dekho. NSAIDs avoid, drugs eGFR se adjust.
+
+| Parameter | Target / cut-off |
+|---|---|
+| HbA1c | <8% (ADA 2026), pragmatic <7.5% |
+| Fructosamine | >=292-293 umol/L = higher risk |
+| Glycated albumin | >15.5% = higher risk |
+| Peri-op glucose | 100-180 mg/dL, hypoglycaemia (<70) avoid |
+| Hb | >=13 g/dL either sex |
+| Ferritin / TSAT | <30 (ya <100 with inflammation) / <20% |
+| eGFR | <60 for >=3 months = CKD, <30 advanced |
+| Albumin | <3.5 g/dL = risk marker (akela nutrition marker nahi) |
+| SARC-F | >=4 = sarcopenia suspect, grip strength se confirm |
+| BMI | >=40 risk badhta hai, hard cut-off nahi |
+
+| Dawa | Pre-op action |
+|---|---|
+| SGLT2 inhibitor | Stop >=3 din (ertugliflozin >=4 din), euglycaemic DKA ka risk |
+| GLP-1 agonist | Blanket stop nahi, aspiration risk anaesthesia ke saath individualise |
+| Metformin | Selected patients mein continue, renal function dekho |
+| Insulin | Basal/bolus adjust karo, type 1 mein basal kabhi band nahi |
+| Sulfonylurea | Surgery wale din hold (hypoglycaemia) |
+
+:::flow
+[teal] 1. Indication | Symptoms + exam + X-ray match?
+v
+[amber] 2. Red flags | Night pain, infection, expectations, depression/opioids
+v
+[amber] 3. Optimise | Sugar ;; Hb/iron ;; eGFR ;; nutrition ;; smoking ;; prehab
+v
+[red] 4. Decide | Shared decision, plan document karo
+:::
+
+> [!flag] Prehab ka sach
+> Prehab ka evidence low-certainty hai: chhota short-term fayda, stay ya long-term outcome par clear asar nahi. Sabse zyada value education aur medical optimisation ki hai, aur kamzor/frail patients ko zyada fayda.
+
+:::qa HbA1c kab unreliable hai aur tab kya karte ho?
+Iron-deficiency anaemia (falsely high), haemolysis/transfusion/blood loss (falsely low), haemoglobinopathy, CKD. Tab fructosamine, fasting glucose ya CGM/glucose logs use karo.
+:::
+
+:::qa SGLT2 inhibitor pre-op kyun band karte hain?
+Euglycaemic DKA ka risk: glucose normal ke paas hota hai isliye miss ho jata hai. >=3 din pehle band, post-op khana-peena normal hone par hi restart.
+:::
+
+:::qa Creatinine normal hai to kya kidney theek hai?
+Nahi. Kam muscle mass (elderly, frail, women) mein creatinine normal rehta hai jabki eGFR low ho sakta hai. eGFR (CKD-EPI) aur trend dekho.
+:::
+
+:::qa Pain out of proportion ya night pain mein kya karoge?
+TKR offer karne se pehle work-up: infection, crystal, osteonecrosis/insufficiency fracture, referred pain (hip/spine), tumour.
+:::
+
+
 ## Talk 3: Patient Selection, Preoperative Evaluation and Planning
 **Slide: First step - confirm the right indication**
 - Concordant symptoms + examination + radiographic findings/disease (all three must agree). Example X-ray: bilateral hip AVN.

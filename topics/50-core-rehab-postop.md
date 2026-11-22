@@ -10,6 +10,54 @@ order: 50
 
 CORE to CORA course (Conceptual Orthopaedics, Noida, 20-22 Nov 2026), Day 3. **Added** points mere hain, speaker ke nahi; jahan 'confirm' likha hai wahan speaker se poochna.
 
+## Major takeaways
+> [!tip] Sabse zaroori 8 points
+> 1. **Day 0 se shuru:** ankle pumps (DVT, calf pump), quad/hamstring/glute isometrics, heel slides, rotations till neutral, gravity-eliminated hip abduction, active seated quadriceps.
+> 2. **Stairs: "Good leg goes to heaven, bad leg goes to hell."** Upar: good leg → bad leg → crutch. Neeche: crutch → bad leg → good leg.
+> 3. **Cane operated hip ke OPPOSITE haath mein.** Cane ka force abductor ke muqable lamba lever arm use karta hai to abductor aur joint reaction force dono kam. Same side par cane ka lever chhota hota hai.
+> 4. **THA bed transfer:** operated side se utro (leg abducted slide karti hai, midline cross nahi). Pehle good leg par khade ho.
+> 5. **THA ADL (posterior approach):** hip ko >90° flexion, adduction aur internal rotation mein mat le jao. Bend karke cheez mat uthao, ankle on knee ya ankles crossed nahi, sit-to-stand mein aage mat jhuko, pivot mat karo. Bed/chair/toilet heights raise karo.
+> 6. **TKA ke baad cross-legged sitting avoid:** deep flexion + rotation + varus/valgus stress. Implants ~120-135° flexion ke liye bane hain. Indian patients ko raised commode aur chair counselling do.
+> 7. **Routine knee brace ka evidence nahi.** Sirf selective use: extensor lag ke liye temporary immobiliser, intra-op MCL injury, instability, hinged implant.
+> 8. **Approach matters:** strict precautions mostly posterior approach ke liye. Direct anterior/lateral mein kam. Surgeon ka protocol follow karo.
+
+| THA (posterior) | Kyun galat | Kya karo |
+|---|---|---|
+| Neeche jhukna | Hip flexion >90° | Reacher/grabber ya squat with operated leg peeche |
+| Ankle on knee / ankles crossed | Flexion + adduction | Beech mein pillow |
+| Sit-to-stand mein aage jhukna | Trunk thigh par fold, flexion >90° | Aage scoot, armrest se push, operated leg aage |
+| Blanket ke liye aage reach | Long-sitting flexion | Grabber ya madad |
+| Pivoting | Internal rotation | Chhote steps, poore body ke saath mudo |
+| Neeche bed/chair/toilet | Hips knees se neeche | Heights raise karo |
+
+:::flow
+[teal] STAIRS UPAR | Good leg pehle
+v
+[amber] Phir bad leg ;; Phir crutch
+v
+[red] STAIRS NEECHE | Crutch pehle ;; Bad leg ;; Phir good leg
+:::
+
+> [!flag] Sach batao
+> Cane aur lat dorsi ka link mera interpretation hai. Main mechanism external moment arithmetic hai (cane ka lever abductor se lamba). Speaker ne exact kya kaha, confirm karna. Bed transfer aur ADL ka reasoning standard teaching hai.
+
+:::qa Cane kis haath mein aur kyun?
+Operated ya painful hip ke opposite haath mein. Cane ka force body-weight ke saath abductor ka kaam baant leta hai, to abductor force aur joint reaction force dono kam. Textbook model: no cane ~2.4 W JRF, same side 2.0 W, opposite 1.3 W.
+:::
+
+:::qa Stairs ka mnemonic?
+"Good goes to heaven, bad goes to hell": upar good pehle, neeche bad pehle (crutch ke saath).
+:::
+
+:::qa TKA ke baad cross-legged kyun nahi?
+Deep flexion (~130-150°) + rotation + varus/valgus torque se posterior poly, patellofemoral aur soft tissue par zyada stress. Implants ~120-135° ke liye designed.
+:::
+
+:::qa Prehab ka evidence?
+Low-certainty chhota short-term fayda, stay/long-term par clear asar nahi. Education aur medical optimisation ki value sabse zyada.
+:::
+
+
 ### Post-op exercises slide (Sun 22 Nov, Day 3 rehab)
 **Slide (sp):** Exercises: ankle pumps (alternate feet); isometrics for quads, hams and glutes (quad setting: tighten thigh, push back of knee downward); heel slides; rotations till neutral (supine, IR/ER up to 45 deg each side from neutral 0); gravity-eliminated hip abduction (supine, slide leg out on the bed); active quadriceps (seated knee extension).
 **Inputs (ad):**

@@ -10,6 +10,68 @@ order: 41
 
 CORE to CORA course (Conceptual Orthopaedics, Noida, 20-22 Nov 2026), Day 1. Slide photos neeche hain. **Added** points mere hain, speaker ke nahi.
 
+## Major takeaways
+> [!tip] Sabse zaroori 6 points
+> 1. **Native knee:** medial femoral condyle zyada distal hai. Distal femoral aur proximal tibial joint line dono ~3° varus to mechanical axis (mLDFA ~87°, MPTA ~87°). Limb mechanical axis neutral (HKA 180°), isliye khade hone par joint line floor ke parallel rehti hai.
+> 2. **3° varus kyun:** knee adduction moment. Stance mein GRF knee centre ke medial se guzarta hai, to medial compartment ~60-70% load leta hai.
+> 3. **Distal femoral cut:** VCA = anatomic axis − mechanical axis angle (default 5-6°), long-leg standing film se measure karo. Cut mechanical axis ke perpendicular.
+> 4. **IM entry point:** notch ke roof par, PCL origin ke just aage, centre se thoda medial. Entry **too medial → varus cut**, **too lateral → valgus cut**.
+> 5. **Resection = implant thickness (~9 mm)** to joint line unchanged. Flexion contracture ko extra distal femur cut se theek mat karo (JL elevation, mid-flexion laxity, pseudo-patella baja).
+> 6. **Constraint ladder:** least constraint jo stable knee de: CR/PS → CCK → hinge. CR vs PS ka survival mein consistent difference nahi.
+
+| Number | Value | Matlab |
+|---|---|---|
+| mLDFA / MPTA | ~87° (normal 85-90°) | Joint line ~3° varus to mechanical axis |
+| HKA | ~180° | Neutral limb |
+| VCA | 5-6° (measure karo) | Anatomic − mechanical axis, femur |
+| Distal/posterior resection | ~9 mm (system specific) | = metal thickness |
+| Joint line tolerance | ~4 mm (speaker) | Elevation >=5 mm = worse scores (study) |
+| JL raised 2 mm / 4 mm (cadaver) | mid-flexion laxity +64% / +111% | Mid-flexion instability |
+
+```svg Native knee: joint line stance mein floor ke parallel kyun hoti hai (angles exaggerated)
+<svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg">
+<line x1="320" y1="14" x2="320" y2="286" stroke="#888" stroke-width="1.5" stroke-dasharray="6 5"/>
+<line x1="296" y1="20" x2="338" y2="280" stroke="#C2410C" stroke-width="4"/>
+<circle cx="296" cy="20" r="10" fill="#fff" stroke="#0F0F0F" stroke-width="2.5"/>
+<circle cx="338" cy="280" r="8" fill="#fff" stroke="#0F0F0F" stroke-width="2.5"/>
+<line x1="230" y1="150" x2="385" y2="150" stroke="#0F6E56" stroke-width="6"/>
+<text class="th" x="34" y="24">Hip centre</text>
+<text class="th" x="352" y="284">Ankle centre</text>
+<text class="th" x="400" y="140">Joint line =</text>
+<text class="th" x="400" y="160">floor ke parallel</text>
+<text class="ts" x="400" y="182">Femoral aur tibial dono</text>
+<text class="ts" x="400" y="200">~87° mech axis se</text>
+<text class="th" x="34" y="130" fill="#C2410C">Mechanical axis (HKA 180°)</text>
+<text class="ts" x="34" y="150">hip se ankle tak line</text>
+<text class="ts" x="34" y="190">Vertical se ~3° jhuki hui:</text>
+<text class="ts" x="34" y="208">hips wide, ankles paas</text>
+<text class="ts" x="34" y="250">Medial condyle zyada distal =</text>
+<text class="ts" x="34" y="268">joint line ~3° varus to mech axis</text>
+</svg>
+```
+
+> [!flag] Common galtiyan
+> - Long-leg film ke bina default VCA lagana (bowed femur, hip deformity, short/tall patient).
+> - "Safe side" ke naam par distal femur zyada kaatna.
+> - Guide ko IM rod par bharosa karke chalana jab canal obstructed ya bowed ho. Navigation/robot ya extramedullary guide use karo.
+
+:::qa Joint line 3° varus kyun hoti hai aur uska fayda?
+Medial condyle distal hai, to femoral aur tibial joint line dono mechanical axis ke ~87° par hain. Limb neutral (HKA 180°) rehta hai aur stance mein joint line floor ke parallel hoti hai. Varus 3° adduction moment ka natural result hai.
+:::
+
+:::qa VCA kaise nikalte ho aur guide mein kya set karte ho?
+Full-length standing AP (patella aage) par anatomic aur mechanical axis ka angle. Default 5-6°. IM guide ko wahi angle par set karo, cut mechanical axis ke perpendicular.
+:::
+
+:::qa Joint line kitna change tolerate hota hai?
+Speaker ke hisaab se ~4 mm upar ya neeche. Evidence: elevation >=5 mm worse scores, cadaver mein 2 mm = +64% aur 4 mm = +111% mid-flexion laxity. Ye low-level evidence hai, hard cut-off nahi.
+:::
+
+:::qa Resection = implant thickness ka matlab?
+Jitna bone kaata (distal aur posterior, ~9 mm) utna hi metal wapas lagta hai. Kam kaato to tight aur joint line neeche, zyada kaato to loose aur joint line upar.
+:::
+
+
 ## Talk 1: Surgical Anatomy of the Knee and Mechanical Axes
 **Devarsh's notes**
 - Medial femoral condyle sits lower (more distal) than the lateral condyle, in AP and lateral views.

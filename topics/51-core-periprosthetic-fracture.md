@@ -10,6 +10,52 @@ order: 51
 
 CORE to CORA course (Conceptual Orthopaedics, Noida, 20-22 Nov 2026), Day 3. **Added** points mere hain, speaker ke nahi; jahan 'confirm' likha hai wahan speaker se poochna.
 
+## Major takeaways
+> [!tip] Sabse zaroori 6 points
+> 1. **Core principle:** fracture implant ke fixation zone ko involve nahi karta aur stem stable hai to **revise mat karo, fix karo.** Revision sirf loose implant ya poor bone stock mein.
+> 2. **Sabse bada sawal: stem stable hai ya nahi.**
+> 3. **Take-home: 50% of all B1 fractures asal mein B2 hain.** X-ray par B1 label par bharosa mat karo, checklist chalao aur OT mein revision stem ready rakho.
+> 4. **Loose stem checklist (koi bhi Yes = loose):** fracture se pehle thigh pain, comminution around stem, cemented stem mein fragmented/deficient cement, uncemented mein intra-op/first few weeks ka fracture, subsidence, periosteal reaction, fracture at fixation level, intra-op loose stem.
+> 5. **Intra-op stem test:** fracture expose karke stem hilao (rotation, push-pull). Stem-bone ya stem-cement interface par motion = loose. Stable = tabhi B1 maano.
+> 6. **Cemented stems:** composite beam aur polished taper dono mein "cement fragmented/deficient?" pooch lo. Polished taper mein 1-2 mm subsidence akela failure nahi.
+
+| Vancouver | Stem | Treatment |
+|---|---|---|
+| A (AG/AL) | Trochanter | Aksar non-op, displaced ya abductor compromise ho to fix |
+| B1 | Fixed | ORIF (plate, cables, strut graft) |
+| B2 | Loose, bone achha | Revision long stem, fracture ke neeche ~2 cortical diameters bypass |
+| B3 | Loose, bone kharab | Revision with allograft-prosthesis composite ya proximal femoral replacement |
+| C | Stem se kaafi neeche | ORIF, stem se independent |
+
+:::flow
+[teal] Periprosthetic fracture | Vancouver type dekho
+v
+[amber] Loose stem checklist | Thigh pain, comminution, cement, subsidence, periosteal reaction, fixation-level fracture
+v
+[amber] Intra-op stem test | Hilao: motion?
+v
+[red] Loose | Revise (B2 / B3) ;; Stable | ORIF (B1)
+:::
+
+> [!flag] Practical rule
+> Doubt ho to dono ready rakho: revision stem aur plate/cable set. Intra-op decision lene ke liye zaroori hai.
+
+> [!verify] Speaker se confirm
+> Slide 49 ke cut-off branch ("St..." = Stable?), Vancouver ya UCS jo wo use karta hai, plate length rule, aur intra-op test exactly kaunsa.
+
+:::qa B1 aur B2 mein farak?
+Dono mein fracture stem ke around hai. B1 mein stem fixed hai (ORIF), B2 mein loose (revision). Take-home: 50% "B1" asal mein B2 hote hain.
+:::
+
+:::qa Loose stem ke signs?
+Fracture se pehle thigh pain, comminution, subsidence, periosteal reaction, fixation-level fracture, deficient cement, ya intra-op motion.
+:::
+
+:::qa Acetabular side par bhi yahi rule?
+Haan: cup stable aur fracture fixation zone mein nahi to fix, cup unstable to revise.
+:::
+
+
 ### Periprosthetic fracture principle (user/speaker, Sun 22 Nov, Day 3)
 **Point:** fracture not involving the zone of fixation of the implant: no need to revise, fix it. Mostly THA periprosthetic fracture.
 **Inputs (ad):** Vancouver (femur): A (AG/AL trochanteric): usually non-op, fix if displaced/abductor compromise. B1 (around/just below a WELL-FIXED stem): ORIF (plate +/- cables, locking plate, strut graft). B2 (loose stem, good bone): revise to long stem bypassing fracture 2 cortical diameters. B3 (loose stem, poor bone stock): revise with allograft-prosthesis composite/ proximal femoral replacement. C (well below stem): ORIF, independent of stem. Key = is the stem stable? (intra-op test, X-ray signs of subsidence/ lucency). Acetabular: stable cup + fracture not involving fixation, fix; unstable cup, revise. Confirm with speaker: exact scheme he used (Vancouver / UCS), plate-length rule.

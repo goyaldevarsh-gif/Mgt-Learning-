@@ -10,6 +10,55 @@ order: 46
 
 CORE to CORA course (Conceptual Orthopaedics, Noida, 20-22 Nov 2026), Day 1. Slide photos neeche hain. **Added** points mere hain, speaker ke nahi.
 
+## Major takeaways
+> [!tip] Sabse zaroori 7 points
+> 1. **Constraint pre-op decide karo aur next-level implant table par rakho.** Least constraint jo stable knee de.
+> 2. **Clinical-to-OR rule:** pliable <10° = routine + osteophytes. Rigid >15° = extended release + reduction osteotomy. Incompetent MCL = attenuated sleeve ko tighten mat karo, VVC/CCK + stems. Severe recurvatum/weak quads = rotating hinge ya VVC with 0° stop.
+> 3. **Severe deformity ke 5 X-ray features:** HKA, joint divergence angle + lateral translation, extra-articular (femoral bowing), bone defect depth, osteophyte burden.
+> 4. **Varus pre-op:** (a) kitna correctable (rigid/partial/unstable), (b) sagittal (FFD, recurvatum), (c) joint opening.
+> 5. **Medial release ladder, step skip nahi:** osteophytes → deep MCL → posteromedial capsule → medial reduction osteotomy → medial epicondylar sliding osteotomy.
+> 6. **Valgus:** skyline view zaroori (patellar tracking). EUA se decide: correctible → medial approach, rigid → lateral approach, LEO distal shift (extension tight) ya posterior shift (FFD).
+> 7. **Robot = precision tool,** diabetes, anaemia, infection, expectation ya pain phenotype optimise nahi karta.
+
+| Exam finding | Soft tissue | Implant |
+|---|---|---|
+| Pliable <10° | Osteophytes + routine | Unconstrained / PS |
+| Rigid >15° | Extended release + reduction osteotomy | PS, stems/augments ready |
+| Lateral thrust, incompetent MCL | Balance to neutral | VVC / CCK + stems |
+| Recurvatum, quads <=3/5 | Under-resect 4-6 mm, no release | Rotating hinge ya VVC 0° stop |
+
+:::flow
+[teal] VARUS medial release | Har step ke baad gaps re-check
+v
+[amber] 1. Osteophytes ;; 2. Deep MCL ;; 3. Posteromedial capsule
+v
+[red] 4. Medial reduction osteotomy ;; 5. Medial epicondylar sliding osteotomy
+:::
+
+:::flow
+[teal] VALGUS | Examination under anaesthesia
+v
+[amber] Correctible | Medial approach, standard TKA ;; Rigid | Lateral approach, graduated release
+v
+[red] LEO | Distal shift: extension tight ;; Posterior shift: FFD
+:::
+
+> [!verify] Speaker se confirm
+> 6-type valgus classification ka author (Mullaji ka published system 9-phenotype radiographic hai). Valgus flowchart mein Type 3/4 numbering pichli slide se ulti hai, isliye dono ko apne apne context mein padho.
+
+:::qa Incompetent MCL mein kya nahi karte?
+Attenuated sleeve ko chase ya tighten nahi karte. Neutral balance karo aur missing stability implant se do: VVC/CCK + stems.
+:::
+
+:::qa Valgus knee mein skyline view kyun?
+Lateral femoral condyle hypoplasia se trochlea flat hota hai aur patella lateral tilt/subluxate hoti hai. Skyline se maltracking, retinacular release, rotation aur resurfacing plan hoti hai.
+:::
+
+:::qa Medial layers (Warren & Marshall)?
+Layer I deep fascia (sartorius), Layer II sMCL + POL, Layer III capsule + deep MCL. Release deep se superficial: deep MCL, posteromedial capsule, sMCL aakhir mein.
+:::
+
+
 ### The Clinical-to-OR Translation (table slide)
 | Clinical exam finding | Soft-tissue strategy | Implant inventory & constraint |
 |---|---|---|

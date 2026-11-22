@@ -10,6 +10,50 @@ order: 49
 
 CORE to CORA course (Conceptual Orthopaedics, Noida, 20-22 Nov 2026), Day 2. Slide photos neeche hain. **Added** points mere hain, speaker ke nahi.
 
+## Major takeaways
+> [!tip] Sabse zaroori 7 points
+> 1. **Femoral offset** = femoral shaft axis se head centre tak ka perpendicular distance. Offset restore karne se abductor lever arm badhta hai, abductor force kam lagti hai, gait behtar, impingement kam, stability behtar, bina leg lengthen kiye.
+> 2. **Order yaad rakho: pehle offset, phir length.** Offset stem/liner design se, length neck/head aur stem depth se.
+> 3. **Neck cut ka rule:** higher cut = longer leg, lower cut = shorter leg. Cut mostly length decide karta hai, offset stem design se. Pehle thoda high cut, zaroorat par re-cut (bone wapas nahi aata).
+> 4. **Coxa vara** (NSA <~120-125°): offset high, head centre low. Standard stem se offset kho jata hai aur leg lengthen hoti hai. Cut more, high-offset stem, lateral entry (varus seating se bacho). **Coxa valga** (>~140°): offset low, head centre high. Standard stem se leg short ho sakti hai, cut kam rakho.
+> 5. **Intra-op checks:** leg length (pin/caliper, trial neck/head, knees-malleoli compare), offset (contralateral/template), shuck test, stability (flexion + IR posterior, extension + ER anterior), impingement.
+> 6. **LLD:** ~10 mm tak aam taur par tolerate hota hai, usse zyada symptomatic.
+> 7. **Cantilever failure:** distal fixation strong, proximal support gayab (calcar resorption, proximal loosening) to poora bending moment stem par aata hai, mid-stem fatigue fracture. Risk: heavy patient, high offset/long neck, thin stem, varus.
+
+| Offset badhane ka tareeka | Asar | Dhyan |
+|---|---|---|
+| High-offset stem (NSA 127-132° ya offset options) | Offset badhta hai, length lagbhag same | Sabse achha first choice |
+| Lateralised / offset liner | Global offset badhta hai | Cup lateral shift hota hai |
+| Longer head/neck (+3.5, +7) | Offset badhta hai par length zyada | Leg pehle se lambi ho to mat karo |
+| Cup ko over-medialise na karo | Native global offset bachta hai | Medial wall reaming se offset jata hai |
+| Stem seating depth | Length control | Offset fix karne ke liye nahi |
+
+| Neck cut | Effect | Fix |
+|---|---|---|
+| Too high | Leg lambi, tight soft tissue, impingement | Re-cut, chhota neck |
+| Too low | Leg chhoti, laxity, calcar support loss | Longer neck/head ya high-offset stem |
+| Per template | Planned length aur head centre | Trial, shuck test, caliper se confirm |
+
+> [!tip] Cantilever ko samjho
+> Diving board socho: jo board kinare par clamp ho wo kam bend hoti hai. Dur clamp ho to wahi load bahut bend karta hai. Stem distally fixed ho aur proximal support na ho to wahi hota hai.
+
+:::qa Offset aur leg length ko alag kaise control karte ho?
+Offset: high-offset stem ya offset liner. Length: neck/head length, stem depth aur neck cut. Pehle offset set karo, phir length.
+:::
+
+:::qa Coxa vara mein neck cut aur stem kaisa?
+Cut more (lower), high-offset stem, lateral entry taaki stem varus mein na jaye. Standard 135° stem se offset kho jata hai.
+:::
+
+:::qa Shuck test kya batata hai?
+Trial reduction par limb ko traction do. Head cup se bahar telescope kare to soft tissue loose (length ya offset kam). Bahut tight = lengthened ya over-stuffed.
+:::
+
+:::qa Cantilever bending kab hota hai?
+Distal fixation solid par proximal support kho gaya (calcar resorption, proximal loosening). Bending moment = force x offset, to high offset par risk badhta hai.
+:::
+
+
 ### Cantilever mechanism in the THA femoral stem [standard text (Gruen modes of stem failure); confirm against speaker's slide]
 - Biomechanics: the joint reaction force (about 3-4 x body weight in gait) acts on the head, medial to the stem axis (offset = lever arm). Bending moment = force x offset, so the stem behaves like a cantilever beam fixed distally: lateral surface in TENSION, medial surface in COMPRESSION.
 - Normally the proximal medial bone/calcar and the cement/bone support share this load. When proximal support is lost (calcar resorption, proximal loosening, bone loss) while the distal stem is still firmly fixed, the whole bending moment goes through the stem: the stem works as a cantilever and can fail by fatigue fracture (usually at the junction of the loose proximal and well-fixed distal stem, mid-stem).

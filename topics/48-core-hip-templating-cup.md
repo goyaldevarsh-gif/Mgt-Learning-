@@ -10,6 +10,60 @@ order: 48
 
 CORE to CORA course (Conceptual Orthopaedics, Noida, 20-22 Nov 2026), Day 2. Slide photos neeche hain. **Added** points mere hain, speaker ke nahi.
 
+## Major takeaways
+> [!tip] Sabse zaroori 7 points
+> 1. **Templating sirf TRUE AP pelvis par.** Inlet/outlet views templating ke liye nahi (wo pelvic trauma views hain). Rotation ya tilt se offset, neck length, LLD aur cup angles galat padte hain.
+> 2. **Magnification ~120%.** True size = measured / 1.2. Obese mein zyada ho sakta hai, isliye marker se check karo.
+> 3. **Marker calibration:** 30 mm ball film par 36 mm dikhe to 1.2. Ya 10 cm K-wire 12 cm dikhe to 1.2. Marker thigh par greater trochanter level par (hip ke same plane mein).
+> 4. **Teardrop** cup medialisation ka landmark hai par COR ke liye limited validity (pelvic tilt se badalta hai). Pooch lena ki speaker "types of teardrop" se kya matlab tha.
+> 5. **Cup target:** inclination ~40°, anteversion ~15-20° (Lewinnek safe zone 40±10, 15±10). **Reaming bhi anteversion mein**, planned cup orientation ke saath, warna eccentric bed.
+> 6. **Cup fixation:** primary = press-fit (1-2 mm under-ream). Screws sirf doubtful press-fit, osteoporotic/sclerotic bone, dysplasia, revision mein. Screw **posterior-superior** quadrant mein, anterior quadrants danger.
+> 7. **Cup lateralise karne ke fayde:** global offset, soft-tissue tension bina leg lengthening, kam impingement, medial bone stock save. Cost: joint reaction force badhta hai, uncovered cup ya iliopsoas impingement ka risk.
+
+```svg Acetabulum ke screw quadrants (Wasielewski, schematic, orientation simplified)
+<svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg">
+<circle cx="170" cy="150" r="120" fill="#fff" stroke="#0F0F0F" stroke-width="3"/>
+<path d="M170 150 L170 30 A120 120 0 0 0 50 150 Z" fill="#CDEFE9" stroke="#0F6E56" stroke-width="2"/>
+<path d="M170 150 L50 150 A120 120 0 0 0 170 270 Z" fill="#FBEAC2" stroke="#B7791F" stroke-width="2"/>
+<path d="M170 150 L170 30 A120 120 0 0 1 290 150 Z" fill="#FAD9CF" stroke="#993C1D" stroke-width="2"/>
+<path d="M170 150 L290 150 A120 120 0 0 1 170 270 Z" fill="#FAD9CF" stroke="#993C1D" stroke-width="2"/>
+<text class="th" x="70" y="100">PS</text>
+<text class="th" x="70" y="215">PI</text>
+<text class="th" x="215" y="100">AS</text>
+<text class="th" x="215" y="215">AI</text>
+<text class="th" x="330" y="50">PS: SAFE</text>
+<text class="ts" x="330" y="70">Achha bone, lambe screw</text><text class="ts" x="330" y="86">(~25-35 mm)</text>
+<text class="th" x="330" y="120">PI: caution</text>
+<text class="ts" x="330" y="140">Chhote screw: sciatic nerve,</text><text class="ts" x="330" y="156">inferior gluteal, pudendal</text>
+<text class="th" x="330" y="190" fill="#993C1D">AS: DANGER</text>
+<text class="ts" x="330" y="210">External iliac a./v.,</text><text class="ts" x="330" y="226">femoral nerve</text>
+<text class="th" x="330" y="252" fill="#993C1D">AI: DANGER</text>
+<text class="ts" x="330" y="270">Obturator nerve, vessels</text>
+</svg>
+```
+
+> [!flag] Common galtiyan
+> - Rotated ya tilted pelvis par templating (symmetrical obturator foramina aur coccyx-symphysis alignment check karo).
+> - Magnification ko ignore karna ya template aur film ka factor mismatch.
+> - Deep medial reaming se offset aur medial wall kho dena.
+
+:::qa Templating ke liye inlet/outlet chahiye?
+Nahi. Sirf true AP pelvis (aur zaroorat par hip AP/lateral). Inlet/outlet pelvic trauma ke views hain.
+:::
+
+:::qa Magnification kaise confirm karte ho?
+Known marker hip level par: 30 mm ball 36 mm dikhe to 1.2. 10 cm K-wire 12 cm dikhe to 1.2. True size = measured / 1.2.
+:::
+
+:::qa Acetabulum ream kis direction mein?
+Anteversion mein, planned cup orientation (~40° inclination, ~15-20° anteversion) ke saath, pehle chhota reamer medially floor tak, phir badhate hue.
+:::
+
+:::qa Screw kahan lagate ho aur kahan nahi?
+Posterior-superior safe. Anterior-superior (external iliac vessels) aur anterior-inferior (obturator) dangerous. Posterior-inferior mein chhote screw.
+:::
+
+
 ### Acetabular cup: screw fixation and other supplemental fixation points [standard text; "point fixation" interpreted as supplemental fixation points (screws/spikes/pegs/fins); confirm what the speaker meant]
 **Base rule:** primary fixation is press-fit (under-ream 1-2 mm, cup 1-2 mm larger than final reamer in good bone; 2 mm+ risks fracture in osteoporotic bone); screws/spikes/pegs are adjuncts for initial stability, not a substitute for a good bony fit. Secondary fixation = bone ingrowth into the porous shell.
 **When to add screws:** doubtful press-fit (levering/rocking on trial), osteoporotic or sclerotic bone, dysplasia with incomplete cover, segmental/cavitary defects, revision, high-risk for early migration. Not needed if cup is rock-stable.

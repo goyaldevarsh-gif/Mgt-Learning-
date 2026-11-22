@@ -10,6 +10,48 @@ order: 44
 
 CORE to CORA course (Conceptual Orthopaedics, Noida, 20-22 Nov 2026), Day 1. Slide photos neeche hain. **Added** points mere hain, speaker ke nahi.
 
+## Major takeaways
+> [!tip] Sabse zaroori 7 points
+> 1. **Distal femur cut = angle + thickness.** Angle = VCA (long-leg film se), thickness = implant thickness (~8-10 mm). Angle mechanical alignment deta hai, thickness extension gap aur joint line.
+> 2. **Long-leg film kab zaroori:** short/tall patient, femoral bowing ya extra-articular deformity, hip pathology (coxa vara/valga, THA), severe varus/valgus ya FFD, IM canal obstruction, revision/complex, navigation/robot na ho.
+> 3. **IM entry:** too medial → varus cut, too lateral → valgus cut. Cut ke baad rod femoral head ki taraf point kare.
+> 4. **Posterior referencing:** posterior cut = implant thickness, size error **aage** dikhta hai: size down = notch, size up = overstuff.
+> 5. **Anterior referencing:** aage safe (no notch), size error **flexion gap** mein: smaller = loose, larger = tight.
+> 6. **Tibia:** tray ko tubercle ke medial 1/3 par align, ER rakho, components lateralise karo (medialise nahi), stylus preserved side par.
+> 7. **CR vs PS:** CR mein open notch aur PCL functional, PS mein box + post/cam jo ~60-70° flexion par engage hota hai.
+
+| | Posterior referencing | Anterior referencing |
+|---|---|---|
+| Guide kahan | Posterior condyles | Anterior cortex |
+| Safe | Flexion gap | Anterior cortex (no notch) |
+| Error kahan dikhta hai | Aage (notch / overstuff) | Flexion gap |
+| Size down | Notching risk | Loose flexion gap |
+| Size up | Patella overstuff | Tight flexion gap |
+
+> [!tip] Memory hook
+> **Posterior ref = flexion gap safe, front pays. Anterior ref = front safe, flexion gap pays.**
+
+| Complication | Kyun | Result |
+|---|---|---|
+| Femoral notching | Anterior cortex breach, stress riser | Supracondylar periprosthetic fracture (low-energy fall) |
+| Overstuffing | Oversized femur / proud flange | Anterior knee pain, reduced flexion, patellar maltracking, patellar overload |
+
+> [!flag] Notch mile to
+> Depth dekho. Shallow notch: protected weight-bearing + osteoporosis care. Deep notch: stem extension ya graft. Fracture ho to periprosthetic fracture ki tarah treat (locked plate, retrograde nail, ya distal femoral replacement).
+
+:::qa Posterior vs anterior referencing: ek line mein?
+Posterior: size error front mein (down=notch, up=overstuff). Anterior: size error flexion gap mein (smaller=loose, larger=tight).
+:::
+
+:::qa Between sizes femur ka kya karte ho?
+Posterior ref mein overstuff se bacho, sizing down with anterior shift prefer karo agar AP/ML fit allow kare, par flexion gap spacer se check karo. Anterior ref mein trial se flexion gap check karke insert/augment adjust.
+:::
+
+:::qa Resection thickness check kaise karte ho?
+Cut bone/resected piece ko caliper se naapo (cartilage subtract). Patla piece = component proud baithega.
+:::
+
+
 ## Talk 5: Bone Cuts in TKA - What, Why and How?
 **Slide: Distal femur cut**
 1. Mechanical alignment = calculate VCA (valgus cut angle).
