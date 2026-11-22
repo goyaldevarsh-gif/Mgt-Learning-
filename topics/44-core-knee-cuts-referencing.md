@@ -113,3 +113,18 @@ CORE to CORA course (Conceptual Orthopaedics, Noida, 20-22 Nov 2026), Day 1. Sli
 - Why avoid medialising the femoral/tibial components: medial placement shifts the trochlear groove medially relative to the extensor mechanism, raising lateral patellar tracking problems (high Q-angle); lateralising both components improves patellar tracking. Patellar button itself is the opposite: medialise it.
 - Why tibial ER: internal rotation of the tibial component internally rotates the tibia relative to the tubercle and increases Q-angle effect; mild ER (toward the medial third of the tubercle) helps tracking.
 - Bone preservation: take the smaller of two sizes with caution on the femur (risk of anterior notching with posterior referencing; see referencing note). Confirm what he meant.
+
+### Complications of femoral notching and overstuffing in TKA (Devarsh asked, Sun 22 Nov) [standard text; confirm against speaker]
+**Notching (anterior femoral cortex breached):**
+- Supracondylar periprosthetic femoral fracture: main complication. Biomechanical studies show reduced torsional and bending strength; clinical risk is mainly with deeper notches (a commonly quoted threshold is >3 mm) in osteoporotic bone (older women, RA, steroids), and with trauma or a fall. Clinical data are mixed: many notched knees never fracture.
+- Fracture usually through the notch at the anterior flange edge, often after a low-energy fall; treat as periprosthetic fracture (locked plate, retrograde nail, or distal femoral replacement/revision if loose).
+- Stress riser in the cortex; may be asymptomatic on follow-up films. Prevention: size correctly, check the stylus, move up a size or shift the guide anteriorly, confirm flush cut before cutting.
+- If a notch is recognised intra-op: assess depth; shallow notches usually accepted with protected weight-bearing and osteoporosis care; deep notches may need a stem extension, bone graft, or a more conservative plan.
+**Overstuffing (oversized femur or anterior flange proud, raised anterior condylar offset):**
+- Overstuffed patellofemoral joint: raised patellofemoral contact force, anterior knee pain.
+- Reduced flexion and stiffness (extensor mechanism tight, patella tethered), loss of terminal flexion.
+- Patellar maltracking, tilt, subluxation, increased lateral release rate; patellar clunk or crepitus.
+- Patellar overload: wear, patellar fracture or component loosening in resurfaced patellae; extensor mechanism stress.
+- Medio-lateral overhang (oversized in width) irritates soft tissue and is linked to pain; a tight flexion gap with upsizing under posterior referencing.
+- Prevention: do not upsize just because the size falls between; prefer sizing down with an anterior shift if AP/ML fit allows; narrow or gender-specific femurs; keep patellar composite thickness no more than native.
+**Link:** posterior referencing: size down = notch, size up = overstuff (see Posterior vs anterior referencing above).

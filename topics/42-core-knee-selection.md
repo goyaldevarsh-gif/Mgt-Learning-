@@ -159,6 +159,11 @@ CORE to CORA course (Conceptual Orthopaedics, Noida, 20-22 Nov 2026), Day 1. Sli
 - Tourniquet (Devarsh, speaker): after applying the tourniquet, pull the tendons/soft tissue distally and hold them there.
   Added (my reading; verify vs speaker): the aim is to avoid the thigh soft tissue/ quadriceps being tethered proximally under the cuff, so the extensor mechanism stays mobile for exposure, patellar eversion and later flexion. Standard points: pad the thigh and place the cuff as proximal as possible, size cuff to limb, exsanguinate by elevation or Esmarch, then inflate. Pressure by limb occlusion pressure (+~50-75 mmHg) or ~100-150 mmHg above systolic (typically 250-300 mmHg thigh); aim to keep under ~90-120 min. Risks: nerve/ muscle injury, skin blisters, post-op thigh pain, DVT; some surgeons release before closure for haemostasis. Evidence on tourniquet vs no tourniquet: less blood loss intra-op, better cementing field, but no clear benefit on total blood loss and possibly slower early recovery.
 
+### Prehab before TKA (user ask, Sun 22 Nov)
+**Role (ad):** optimise patient before surgery: strength/ROM/walking, teach post-op exercises, aids and home set-up, plus medical optimisation (anaemia, glucose, BMI, smoking, BP) and expectation setting.
+**Evidence (ad, from memory, not searched):** Cochrane-type reviews: low-certainty, small short-term gain in pain/function, no clear effect on LOS or long-term outcome. Benefit mostly for weak/frail pts; best value = education + medical optimisation. Confirm with speaker.
+**Easy plan (ad):** 4-6 wks pre-op, daily: quad sets, SLR, heel slides, sit-to-stand from chair, glute bridges, ankle pumps; walk 20-30 min; stationary cycling if available; practise crutch/walker and stairs (good up, bad down); fix home (raised commode, remove rugs); stop smoking, control sugar, treat anaemia.
+
 ## Slide photos
 ![Course slide](figs/cora_0c82ac97.jpg)
 ![Course slide](figs/cora_78a1164f.jpg)
